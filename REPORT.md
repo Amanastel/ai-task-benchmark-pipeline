@@ -6,9 +6,16 @@ Held-out verification repository: `https://github.com/sdispater/tomlkit` (chosen
 *after* the pipeline was written, for a different build backend and a different
 test layout).
 
-> **Results tables are filled in from the delivered artifacts at the end of this
-> document.** Every number in them is reproducible from `output/run-summary.json`,
-> `output/glom/.okf/`, and `tasks.json`.
+**Headline result.** From a fresh clone, one command produces a pinned,
+containerized, lint-clean glom whose suite passes **twice with identical
+per-test fingerprints** (202 → 268 tests), a knowledge layer whose **3,759
+graph edges re-verify at 99.95%** and whose **1,411 claims verify at 100%**, and
+**10 benchmark tasks that all pass six validation gates**. The pipeline then ran
+unchanged on a repository it had never seen and found four real defects in
+itself.
+
+Every number in §5 is read back out of the delivered artifacts by
+`transcripts/results.py`; §8 maps each claim to the file it comes from.
 
 ---
 
@@ -553,9 +560,78 @@ That last history category is the brief's rule enforced mechanically: a failure
 caused by an import error does not count, so those candidates are dropped rather
 than dressed up.
 
-### 5.6 Held-out repository
+### 5.6 Held-out repository — `tomlkit`
 
-See §1.3 and `transcripts/02-verification-log.md` for what it found.
+Chosen **after** the pipeline was written, for two properties glom does not
+have: a **poetry-core** build backend and a **root-level `tests/`** directory.
+Run with the same command, no repo-specific configuration:
+
+```bash
+./run.sh https://github.com/sdispater/tomlkit.git --task-count 6 \
+    --out heldout/output --tasks-out heldout/tasks --work heldout/.okfwork
+```
+
+**Stage 1 — the acceptance bar passed:**
+
+| | glom | tomlkit (held out) |
+|---|---|---|
+| Build backend | setuptools | **poetry-core** |
+| Test layout | `glom/test/` | **`tests/` at root** |
+| Packages pinned (hashed) | 14 | **11** |
+| Lint rung kept | `fix+format` | **`config-only`** (both fix rungs regressed the suite) |
+| Baseline → final tests | 202 → 268 | **1058 → 1091** |
+| Two runs identical | ✅ `0d1f3c033362` | ✅ **`6f368c59f5e5`** |
+| Mutation score | 81.7% (49/60) | **66.7% (16/24)** |
+
+**Stage 2 — knowledge layer:** 30 modules, 809 symbols, **3,917 edges at 99.92%
+re-verified**, **1,696 claims at 100% verified**, 532 commits classified, 89.4%
+coverage with per-test contexts.
+
+**Stage 3 — 6 validated tasks across all three sources, 4 distinct modules:**
+
+| Task | Source | Difficulty | Cases | Module |
+|---|---|---|---|---|
+| `hist-d44cb48f` | history | hard | 2 | `tomlkit.items` |
+| `hist-691dc333` | history | easy | 1 | `tomlkit.container` |
+| `hist-90132195` | history | easy | 1 | `tomlkit.parser` |
+| `exc-tomlkit-container-container-as-string` | excision | hard | 362 | `tomlkit.container` |
+| `exc-tomlkit-items-item` | excision | hard | 195 | `tomlkit.items` |
+| `new-tomlkit-api-public-api` | net-new | easy | 5 | `tomlkit.api` |
+
+#### The held-out run exited non-zero, and that is the correct outcome
+
+It delivered **3** history-derived tasks where the pipeline requires **4**, so
+it reported a failure instead of claiming success. The cause is precise and
+visible in `heldout/tasks.json`: **23 of 30 rejected candidates** were rejected
+because *"parent tree produces collection/import errors, not behavioural
+failures."*
+
+tomlkit's behaviour-changing commits routinely add a public symbol **and** a
+test that imports it. Overlaid onto the parent tree, that test file fails at
+import. The brief is explicit that "a failure caused by an import error …
+does not count", so those commits cannot yield a valid task in this format and
+are dropped. That is the rule working, not a defect.
+
+What *is* a defect is the budget: all 26 history probe slots were consumed
+(23 rejected + 3 accepted), so the search stopped while eligible candidates
+remained — tomlkit has 193 commits classified as fixes. The binding constraint
+was the pipeline's own budget, not the repository. That is now tunable:
+
+```bash
+./run.sh <repo> --stages tasks --probe-budget 80
+```
+
+I am reporting the run as it actually completed rather than re-running it with
+a larger budget and quoting the better number, because the failure mode and its
+diagnosis are the more useful result.
+
+**What the held-out exercise bought.** Four real defects that glom could never
+have exposed — git submodules, poetry dependency groups, a ruff "safe" fix that
+breaks a test, and a hard-coded mutation timeout. All four are written up in
+`transcripts/02-verification-log.md` (V7–V9). Every fix landed in `detect.py`,
+`repo.py`, `lint.py` and `stage.py` — the places the architecture designates
+for repo-specific knowledge and policy. No caller changed, which was the real
+test of the single-detection-point rule.
 
 ---
 
@@ -662,17 +738,31 @@ that; the CLI is the part that would go.
    (`hygiene/mutate.py` takes a `files` argument and a suite map); wiring it
    into stage 3 is a small job I did not get to.
 
-7. **Only one held-out repo was tested.** `tomlkit` exercises a different build
+7. **History mining loses commits whose tests import new API.** The single
+   biggest limitation, and the one that made the held-out run exit non-zero:
+   23 of 30 rejected candidates there were commits whose post-commit tests
+   import a symbol the parent does not have. The rejection is correct under the
+   brief's rules, but it discards genuinely good tasks.
+
+   The fix I would build next: when the parent tree gives a collection error,
+   retry with a *surgical* overlay — keep the parent's version of the test file
+   and splice in only the test functions the commit added, rather than replacing
+   the whole file. That preserves the parent's import block. It does not rescue
+   every case (a new test that legitimately needs the new symbol still cannot
+   run before it exists), but it would recover the common one where a new test
+   sits in a file whose imports the commit also touched.
+
+8. **Only one held-out repo was tested.** `tomlkit` exercises a different build
    backend and a different test layout, which is the highest-value single
    choice, but one repo is one data point. A `src/` layout, a namespace package,
    and a repo needing system libraries are the next three I would try.
 
-8. **Determinism is demonstrated, not proven.** Repeated runs on one machine on
+9. **Determinism is demonstrated, not proven.** Repeated runs on one machine on
    one day is evidence, not a guarantee. Genuine determinism would need the same
    check across machines and across time, with the lock and image digest as the
    anchors. Both anchors exist; the cross-machine run does not.
 
-9. **No cleanup of Docker artifacts.** The pipeline leaves its built image
+10. **No cleanup of Docker artifacts.** The pipeline leaves its built image
    behind, deliberately, so stages 2 and 3 can reuse it. On a fleet that needs a
    retention policy.
 

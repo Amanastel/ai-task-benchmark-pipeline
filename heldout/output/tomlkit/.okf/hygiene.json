@@ -1,0 +1,114 @@
+{
+  "base_image": "python@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534",
+  "container": {
+    "image": "okf-tomlkit:latest",
+    "notes": [
+      "no backing services detected; the test container runs with no network"
+    ],
+    "services": [],
+    "test_command": "python -m pytest \"$@\" $PATHS -p no:cacheprovider --timeout=300 -q"
+  },
+  "deterministic": true,
+  "failures": [],
+  "image_tag": "okf-tomlkit:latest",
+  "lint": {
+    "baselined_rules": {},
+    "config": "ruff.toml",
+    "fell_back": true,
+    "fixed": 0,
+    "formatted_files": 0,
+    "mode": "config-only",
+    "notes": [
+      "repo already configured ruff in pyproject.toml; our config takes precedence",
+      "fell back to 'config-only': the more aggressive pass lost a passing test (1058 -> 1058), so the repo's behaviour was preserved over its tidiness"
+    ],
+    "ok": false,
+    "remaining": 0
+  },
+  "notes": [
+    "lint mode 'fix+format' changed the test outcome (1058 passing -> 1057); not used",
+    "lint mode 'fix-only' changed the test outcome (1058 passing -> 1057); not used",
+    "1 test line(s) use clock/random/network APIs that can make a verdict wobble; reported, not rewritten",
+    "nondeterminism scan: 1 flagged line(s)"
+  ],
+  "ok": true,
+  "pin": {
+    "extras": [],
+    "hashed": true,
+    "lock": "requirements.lock",
+    "notes": [],
+    "ok": true,
+    "packages": 11,
+    "resolved": {
+      "coverage": "7.16.1",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "poetry-core": "2.4.1",
+      "pytest": "7.4.4",
+      "pytest-cov": "4.1.0",
+      "pytest-timeout": "2.4.0",
+      "pyyaml": "6.0.3",
+      "ruff": "0.16.7",
+      "tomli": "2.4.1"
+    },
+    "runtime_lock": "",
+    "source": "pyproject.toml"
+  },
+  "runs": [
+    {
+      "duration_s": 2.86,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "b1bab122851dfc8ba54dd4285dd27d5dd7af77f8f9cc80703e8d708a1a2004ba",
+      "label": "baseline",
+      "passed": 1058,
+      "skipped": 0,
+      "total": 1058
+    },
+    {
+      "duration_s": 3.0,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "6f368c59f5e563dd3373b6c81863fb80377ba54e243703eabed8d84dfc1e8292",
+      "label": "final-1",
+      "passed": 1091,
+      "skipped": 0,
+      "total": 1091
+    },
+    {
+      "duration_s": 2.55,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "6f368c59f5e563dd3373b6c81863fb80377ba54e243703eabed8d84dfc1e8292",
+      "label": "final-2",
+      "passed": 1091,
+      "skipped": 0,
+      "total": 1091
+    }
+  ],
+  "tests": {
+    "cases": 33,
+    "doctest_cases": 10,
+    "dropped": 39,
+    "exception_cases": 0,
+    "files": [
+      "tests_generated/test_behaviour_tomlkit__compat.py",
+      "tests_generated/test_behaviour_tomlkit__utils.py",
+      "tests_generated/test_behaviour_tomlkit_api.py",
+      "tests_generated/test_behaviour_tomlkit_container.py",
+      "tests_generated/test_doctests_tomlkit_api.py",
+      "tests_generated/test_doctests_tomlkit_items.py"
+    ],
+    "notes": [
+      "10 doctest case(s) materialised from existing docstrings",
+      "29 value and 0 exception characterisation case(s) probed in-container",
+      "39 candidate(s) dropped as non-deterministic, unreprable or failing"
+    ],
+    "ok": true,
+    "value_cases": 29
+  }
+}

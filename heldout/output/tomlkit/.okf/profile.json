@@ -1,0 +1,50 @@
+{
+  "build_backend": "poetry",
+  "build_requires": [
+    "poetry-core>=1.0.0a9"
+  ],
+  "console_scripts": {},
+  "ecosystem": "python",
+  "extra_test_requirements": [
+    "PyYAML>=6.0.0,<7.0.0",
+    "pytest-cov>=4.0.0,<5.0.0",
+    "pytest>=7.2.0,<8.0.0"
+  ],
+  "extras": {},
+  "has_dockerfile": false,
+  "has_lock": true,
+  "lint_configs": [
+    "pyproject.toml[tool.ruff]",
+    ".pre-commit-config.yaml"
+  ],
+  "manifest_files": [
+    "pyproject.toml"
+  ],
+  "name": "tomlkit",
+  "notes": [
+    "poetry constraints are not PEP 440; using backend metadata",
+    "3 test dependency/ies found in dependency groups rather than extras; resolved alongside the project"
+  ],
+  "packages": [
+    {
+      "is_package": true,
+      "module_count": 12,
+      "name": "tomlkit",
+      "path": "tomlkit",
+      "source_root": ""
+    }
+  ],
+  "python_requires": ">=3.9",
+  "python_version": "3.11",
+  "requirement_files": [],
+  "root": "C:\\Users\\Aman.Kumar3\\Desktop\\R Systems Project\\POC\\Assignment\\heldout\\.okfwork\\source",
+  "runtime_requirements": [],
+  "source_root": "",
+  "static_deps_resolved": false,
+  "system_packages": [],
+  "test_extras": [],
+  "test_framework": "pytest",
+  "test_paths": [
+    "tests"
+  ]
+}

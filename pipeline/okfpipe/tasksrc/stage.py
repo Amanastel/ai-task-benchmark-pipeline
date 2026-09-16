@@ -27,6 +27,13 @@ from .model import TaskSpec, instruction_quality
 
 # How many candidates to probe per source before giving up. Probing is the
 # expensive part (two container runs each), so the budget is explicit.
+#
+# These are defaults, not limits: the caller can raise them. On the held-out
+# repo the history budget was the binding constraint rather than the repository
+# -- 23 of 26 probed commits were rejected because their post-commit tests
+# import a symbol the parent commit does not have, which is a structural
+# failure the brief says cannot count, so the budget ran out before four
+# history tasks validated.
 HISTORY_PROBE_BUDGET = 26
 EXCISION_PROBE_BUDGET = 14
 
@@ -225,7 +232,8 @@ def _probe_constructor(image: str, out_repo: Path, workdir: Path, module: str,
 # --------------------------------------------------------------------------
 
 def run(out_repo: Path, handle: RepoHandle, tasks_out: Path, workdir: Path,
-        target_count: int = 10, repeats: int = 3) -> dict:
+        target_count: int = 10, repeats: int = 3,
+        history_budget: int | None = None) -> dict:
     workdir.mkdir(parents=True, exist_ok=True)
     prof = detect(out_repo)
     okf = out_repo / ".okf"
@@ -294,8 +302,8 @@ def run(out_repo: Path, handle: RepoHandle, tasks_out: Path, workdir: Path,
     # Every source keeps a cursor, so the quota pass and the backfill pass
     # continue through the same candidate list instead of re-probing work
     # already done -- probing is two container runs per candidate.
-    history_pool = mine.history_candidates(prof, history_rows,
-                                           limit=HISTORY_PROBE_BUDGET)
+    budget = history_budget or HISTORY_PROBE_BUDGET
+    history_pool = mine.history_candidates(prof, history_rows, limit=budget)
     excision_pool = mine.excision_candidates(symbols, coverage)
     detector_pool: list[tuple[str, dict | None]] = [
         ("eq_without_hash", mine.detect_eq_without_hash(prof)),
@@ -305,7 +313,7 @@ def run(out_repo: Path, handle: RepoHandle, tasks_out: Path, workdir: Path,
 
     def fill_history(want: int) -> None:
         while counters["history"] < want and cursors["history"] < len(history_pool) \
-                and cursors["history"] < HISTORY_PROBE_BUDGET:
+                and cursors["history"] < budget:
             row = history_pool[cursors["history"]]
             cursors["history"] += 1
             probe, overlay = mine.probe_history(handle, prof, row, image,

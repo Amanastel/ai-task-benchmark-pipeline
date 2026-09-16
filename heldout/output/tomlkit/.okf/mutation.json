@@ -1,0 +1,74 @@
+{
+  "discarded_unparsable": 0,
+  "killed": 16,
+  "killed_by_suite": {
+    "existing": 16,
+    "generated": 2
+  },
+  "killed_only_by_generated_tests": [],
+  "mutants_run": 24,
+  "mutation_score": 0.6667,
+  "notes": [
+    "16/24 injected bugs detected (mutation score 66.7%)",
+    "8 mutant(s) survived; each is a real hole in the suite and is listed individually in .okf/mutation.json"
+  ],
+  "survivors": [
+    {
+      "change": "and  |  if isinstance(existing, Table) and isinstance(v, Table):\n                    if not existing.is_super_table() and not v. -> or  |  if isinstance(existing, Table) or isinstance(v, Table):\n                    if not existing.is_super_table() and (not v.",
+      "file": "tomlkit/container.py",
+      "id": "tomlkit/container.py:431:logic",
+      "line": 431,
+      "operator": "logic"
+    },
+    {
+      "change": "'\" does not exist.'  |  message = f'Key \"{key}\" does not exist.' -> '\" does not exist.X'  |  message = f'Key \"X{key}\" does not exist.X'",
+      "file": "tomlkit/exceptions.py",
+      "id": "tomlkit/exceptions.py:186:constant",
+      "line": 186,
+      "operator": "constant"
+    },
+    {
+      "change": "'\" already exists.'  |  message = f'Key \"{key}\" already exists.' -> '\" already exists.X'  |  message = f'Key \"X{key}\" already exists.X'",
+      "file": "tomlkit/exceptions.py",
+      "id": "tomlkit/exceptions.py:198:constant",
+      "line": 198,
+      "operator": "constant"
+    },
+    {
+      "change": "<  |  if char < 16:\n            display_code += \"0\" -> <=  |  if char <= 16:\n            display_code += '0'",
+      "file": "tomlkit/exceptions.py",
+      "id": "tomlkit/exceptions.py:207:comparison",
+      "line": 207,
+      "operator": "comparison"
+    },
+    {
+      "change": "0  |  idx = 0  # insert position of the self._value list -> 1  |  idx = 1",
+      "file": "tomlkit/items.py",
+      "id": "tomlkit/items.py:1605:constant",
+      "line": 1605,
+      "operator": "constant"
+    },
+    {
+      "change": "|  |  comma: Whitespace | None = Whitespace(\",\") if pos < length else None -> &  |  comma: Whitespace & None = Whitespace(',') if pos < length else None",
+      "file": "tomlkit/items.py",
+      "id": "tomlkit/items.py:1621:arithmetic",
+      "line": 1621,
+      "operator": "arithmetic"
+    },
+    {
+      "change": "True  |  with self._state(restore=True):\n                            if not self.inc() or self._current != \"\\n\":\n                 -> False  |  with self._state(restore=False):\n                            if not self.inc() or self._current != '\\n':\n               ",
+      "file": "tomlkit/parser.py",
+      "id": "tomlkit/parser.py:266:constant",
+      "line": 266,
+      "operator": "constant"
+    },
+    {
+      "change": "return <expr>  |  return False -> return None  |  return None",
+      "file": "tomlkit/source.py",
+      "id": "tomlkit/source.py:164:return",
+      "line": 164,
+      "operator": "return"
+    }
+  ],
+  "total_candidates": 24
+}

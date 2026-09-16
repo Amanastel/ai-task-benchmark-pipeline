@@ -3,6 +3,14 @@
 .okfwork/
 heldout/.okfwork/
 
+# The held-out verification run is supplementary evidence, not a deliverable.
+# Its transformed repo and knowledge layer are committed (heldout/output/) along
+# with its task manifest, because those are what substantiate the generality
+# claim. The task trees themselves are another full input/ + solution/ checkout
+# per task and would double the repository for no extra evidence -- regenerate
+# them with the command in REPORT.md section 5.6.
+heldout/tasks/
+
 # Raw run logs (the durable summaries live in output/run-summary.json and
 # output/<repo>/.okf/, which ARE committed).
 *.log

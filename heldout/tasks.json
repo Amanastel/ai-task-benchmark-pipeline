@@ -1,0 +1,450 @@
+{
+  "counts": {
+    "by_difficulty": {
+      "easy": 3,
+      "hard": 3,
+      "medium": 0
+    },
+    "by_source": {
+      "excision": 2,
+      "history": 3,
+      "net-new": 1
+    },
+    "delivered": 6,
+    "distinct_modules": 4
+  },
+  "determinism_repeats": 2,
+  "failures": [
+    "only 3 history-derived task(s) validated; the brief requires at least 4"
+  ],
+  "generator": "okfpipe 1.0.0",
+  "modules": [
+    "tomlkit.api",
+    "tomlkit.container",
+    "tomlkit.items",
+    "tomlkit.parser"
+  ],
+  "rejected_candidates": [
+    {
+      "id": "history-e6e5d3803b",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "fix: delete keys from out of order table (#379)"
+    },
+    {
+      "id": "history-5721f88aad",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix the default ordering of dicts and add support for sorting keys"
+    },
+    {
+      "id": "history-b277474d3f",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "fix: escape backslashes in basic strings Resolve #245"
+    },
+    {
+      "id": "history-3f5408e34a",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix handling of inline tables"
+    },
+    {
+      "id": "history-deac74db82",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Add unwrap method to recursive convert to plain old python objects (#187)"
+    },
+    {
+      "id": "history-6858c97891",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix tests for Python <3.6"
+    },
+    {
+      "id": "history-017b4d8ef3",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "fix values starting with t or f being parsed as booleans."
+    },
+    {
+      "id": "history-b73d192041",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix: Inconsistent newlines on Windows (#402)"
+    },
+    {
+      "id": "history-a3cb8a2b71",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "feat: allow users to register custom encoders (#296)"
+    },
+    {
+      "id": "history-5a80434873",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Comply with TOML spec v1.0.0"
+    },
+    {
+      "id": "history-e773d00129",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix linting errors"
+    },
+    {
+      "id": "history-a46ac201e3",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Remove the is_tomlkit check"
+    },
+    {
+      "id": "history-84b5876f19",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix handling of aots after sub tables"
+    },
+    {
+      "id": "history-f9acc14ba5",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix table display order"
+    },
+    {
+      "id": "history-bb3561b509",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix string parsing when before last char is backslash"
+    },
+    {
+      "id": "history-01e56ea366",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Keep consistent line endings when changing files and use os.linesep as default for new files (#201)"
+    },
+    {
+      "id": "history-f973cabf76",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Properly escape raw strings"
+    },
+    {
+      "id": "history-60536f8198",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Improve distinction between date(time)s and numbers"
+    },
+    {
+      "id": "history-bd31dbd8e2",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "fix: Dumping a subelement of a parsed toml fails starting on 4rd level of nesting (#419)"
+    },
+    {
+      "id": "history-8efc421991",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix adding an element after another element without a new line"
+    },
+    {
+      "id": "history-a777ee0f26",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix key comparison"
+    },
+    {
+      "id": "history-7b0284992f",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Fix comma handling when parsing inline tables"
+    },
+    {
+      "id": "history-b0d873094a",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "Prevents TOMLFile from changing line endings"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-container-ends-with-whitespace",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-container-container-append",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-source-source-inc",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-source-source-advance-while",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-container-container-item",
+      "reason": "validation: failed gate(s): fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-tomlkit-source-source-advance-until",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "id": "netnew-eq_without_hash",
+      "reason": "could not construct two equal instances to specify the invariant",
+      "source": "net-new"
+    }
+  ],
+  "rejected_count": 30,
+  "repo": {
+    "head_sha": "4b38becd75405e0f38ef3e47e9839eb407591c8a",
+    "name": "tomlkit",
+    "remote": "https://github.com/sdispater/tomlkit.git"
+  },
+  "schema": "okf/1",
+  "tasks": [
+    {
+      "difficulty": "easy",
+      "evidence": "tasks/hist-691dc333/evidence/",
+      "files_in_scope": [
+        "tomlkit/container.py"
+      ],
+      "id": "hist-691dc333",
+      "module": "tomlkit.container",
+      "modules": [
+        "tomlkit.container"
+      ],
+      "provenance": {
+        "commit_date": "2018-07-10T14:41:22-05:00",
+        "commit_sha": "691dc33379163b775980109ae7871468b42a964c",
+        "commit_subject": "Fix Container dict behavior",
+        "kind": "history",
+        "parent_sha": "c1cc54f59833e38d58b30a30655404d8b92b84b0",
+        "upstream_url": "https://github.com/sdispater/tomlkit/commit/691dc33379163b775980109ae7871468b42a964c"
+      },
+      "source_type": "history",
+      "title": "tomlkit.container: Fix Container dict behavior",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 1,
+      "verifier_command": "tasks/hist-691dc333/verifier/run.sh input"
+    },
+    {
+      "difficulty": "easy",
+      "evidence": "tasks/hist-90132195/evidence/",
+      "files_in_scope": [
+        "tomlkit/parser.py"
+      ],
+      "id": "hist-90132195",
+      "module": "tomlkit.parser",
+      "modules": [
+        "tomlkit.parser"
+      ],
+      "provenance": {
+        "commit_date": "2018-07-09T21:34:22-05:00",
+        "commit_sha": "9013219567c9610287c2fdc41970cd891a29d154",
+        "commit_subject": "Fix parsing of tables with same start",
+        "kind": "history",
+        "parent_sha": "440cb4f6a9e543a19c87f79b0ae8bd423d029236",
+        "upstream_url": "https://github.com/sdispater/tomlkit/commit/9013219567c9610287c2fdc41970cd891a29d154"
+      },
+      "source_type": "history",
+      "title": "tomlkit.parser: Fix parsing of tables with same start",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 1,
+      "verifier_command": "tasks/hist-90132195/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/hist-d44cb48f/evidence/",
+      "files_in_scope": [
+        "tomlkit/items.py",
+        "tomlkit/parser.py"
+      ],
+      "id": "hist-d44cb48f",
+      "module": "tomlkit.items",
+      "modules": [
+        "tomlkit.items",
+        "tomlkit.parser"
+      ],
+      "provenance": {
+        "commit_date": "2018-07-10T12:18:43-05:00",
+        "commit_sha": "d44cb48f334ae3c6bd2744f2ce62e1467517c553",
+        "commit_subject": "Fix handling of whitespace in inline tables",
+        "kind": "history",
+        "parent_sha": "b59e84468163fbf73d45db4d178dda85263e01a0",
+        "upstream_url": "https://github.com/sdispater/tomlkit/commit/d44cb48f334ae3c6bd2744f2ce62e1467517c553"
+      },
+      "source_type": "history",
+      "title": "tomlkit.items: Fix handling of whitespace in inline tables",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 2,
+      "verifier_command": "tasks/hist-d44cb48f/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/exc-tomlkit-container-container-as-string/evidence/",
+      "files_in_scope": [
+        "tomlkit/container.py"
+      ],
+      "id": "exc-tomlkit-container-container-as-string",
+      "module": "tomlkit.container",
+      "modules": [
+        "tomlkit.container"
+      ],
+      "provenance": {
+        "detector": "tomlkit/container.py:633",
+        "excision_target": "tomlkit.container.Container.as_string",
+        "kind": "excision"
+      },
+      "source_type": "excision",
+      "title": "Implement tomlkit.container.Container.as_string",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 362,
+      "verifier_command": "tasks/exc-tomlkit-container-container-as-string/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/exc-tomlkit-items-item/evidence/",
+      "files_in_scope": [
+        "tomlkit/items.py"
+      ],
+      "id": "exc-tomlkit-items-item",
+      "module": "tomlkit.items",
+      "modules": [
+        "tomlkit.items"
+      ],
+      "provenance": {
+        "detector": "tomlkit/items.py:114",
+        "excision_target": "tomlkit.items.item",
+        "kind": "excision"
+      },
+      "source_type": "excision",
+      "title": "Implement tomlkit.items.item",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 195,
+      "verifier_command": "tasks/exc-tomlkit-items-item/verifier/run.sh input"
+    },
+    {
+      "difficulty": "easy",
+      "evidence": "tasks/new-tomlkit-api-public-api/evidence/",
+      "files_in_scope": [
+        "tomlkit/api.py"
+      ],
+      "id": "new-tomlkit-api-public-api",
+      "module": "tomlkit.api",
+      "modules": [
+        "tomlkit.api"
+      ],
+      "provenance": {
+        "detector": "missing_dunder_all",
+        "kind": "net-new"
+      },
+      "source_type": "net-new",
+      "title": "Declare the public API of tomlkit.api",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 5,
+      "verifier_command": "tasks/new-tomlkit-api-public-api/verifier/run.sh input"
+    }
+  ],
+  "verifier_runner": "tasks/<id>/verifier/run.sh <input|solution>"
+}

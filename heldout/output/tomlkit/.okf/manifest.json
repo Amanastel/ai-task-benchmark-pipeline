@@ -1,0 +1,100 @@
+{
+  "counts": {
+    "claims": 1696,
+    "commits": 532,
+    "edges": 3917,
+    "modules": 30,
+    "symbols": 809
+  },
+  "files": {
+    "claims": "claims.jsonl",
+    "coverage": "coverage.json",
+    "edges": "edges.jsonl",
+    "graph": "../repo_graph.json",
+    "history": "history.jsonl",
+    "hotspots": "hotspots.json",
+    "modules": "modules.jsonl",
+    "symbols": "symbols.jsonl"
+  },
+  "generator": "okfpipe 1.0.0",
+  "repo": {
+    "branch": "master",
+    "head_sha": "4b38becd75405e0f38ef3e47e9839eb407591c8a",
+    "name": "tomlkit",
+    "packages": [
+      "tomlkit"
+    ],
+    "python_version": "3.11",
+    "remote": "https://github.com/sdispater/tomlkit.git"
+  },
+  "schema": "okf/1",
+  "unresolved_call_targets": {
+    "''.join": 6,
+    "'.'.join": 6,
+    "a.as_string": 7,
+    "current.append": 6,
+    "doc.add": 15,
+    "doc.append": 5,
+    "doc.as_string": 138,
+    "doc.pop": 7,
+    "doc['x'].append": 5,
+    "edited": 5,
+    "example": 14,
+    "f.read": 11,
+    "fh.read": 6,
+    "fh.write": 5,
+    "i.as_string": 21,
+    "k.is_dotted": 11,
+    "key.is_dotted": 8,
+    "m.group": 32,
+    "new_values.append": 8,
+    "parser.parse": 12,
+    "raw.startswith": 8,
+    "result.as_string": 6,
+    "self._new": 59,
+    "self._render_table": 7,
+    "self._state": 9,
+    "self.append": 9,
+    "self.end": 11,
+    "self.extract": 19,
+    "self.inc": 43,
+    "self.mark": 15,
+    "self.parse_error": 49,
+    "t.add_line": 8,
+    "t.as_string": 13,
+    "table.append": 6,
+    "table.as_string": 22,
+    "table.get": 5,
+    "table.remove": 6,
+    "toml_f.read": 6,
+    "toml_f.write": 7,
+    "v.as_string": 8
+  },
+  "verification": {
+    "claims": {
+      "checked": 1696,
+      "rate": 1.0,
+      "verified": 1696
+    },
+    "edges": {
+      "checked": 3917,
+      "failure_count": 3,
+      "failures": [
+        {
+          "edge": "calls:symbol:tests.test_toml_tests.untag->symbol:stypes[value['type']]@tests/test_toml_tests.py:45",
+          "reason": "token \"stypes[value['type']]\" not near tests/test_toml_tests.py:45"
+        },
+        {
+          "edge": "calls:symbol:tomlkit.items.DateTime.__add__->symbol:datetime.datetime(self.year, self.month, self.day, self.hour, self.minute, self.second, self.microsecond, self.tzinfo).__add__@tomlkit/items.py:1103",
+          "reason": "token '__add__' not near tomlkit/items.py:1103"
+        },
+        {
+          "edge": "calls:symbol:tomlkit.items.DateTime.__sub__->symbol:datetime.datetime(self.year, self.month, self.day, self.hour, self.minute, self.second, self.microsecond, self.tzinfo).__sub__@tomlkit/items.py:1126",
+          "reason": "token '__sub__' not near tomlkit/items.py:1126"
+        }
+      ],
+      "rate": 0.9992,
+      "verified": 3914
+    }
+  }
+}

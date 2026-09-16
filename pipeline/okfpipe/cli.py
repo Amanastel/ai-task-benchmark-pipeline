@@ -41,6 +41,10 @@ def build_parser() -> argparse.ArgumentParser:
                    help="mutation budget for the injected-bug sweep (default: 60)")
     p.add_argument("--validation-repeats", type=int, default=3,
                    help="times each task verifier is re-run to prove determinism")
+    p.add_argument("--probe-budget", type=int, default=0,
+                   help="history commits to probe before giving up (default 26). "
+                        "Raise it when a repo's history yields few usable "
+                        "candidates; each probe costs two container runs.")
     p.add_argument("--no-format", action="store_true",
                    help="apply the linter but not the formatter")
     p.add_argument("--skip-mutation", action="store_true",
@@ -145,7 +149,8 @@ def main(argv: list[str] | None = None) -> int:
                 tres = tasks_stage.run(
                     out_repo, handle, tasks_out, work / "tasks",
                     target_count=args.task_count,
-                    repeats=args.validation_repeats)
+                    repeats=args.validation_repeats,
+                    history_budget=args.probe_budget or None)
             summary["tasks"] = tres
             failures += tres.get("failures", [])
 

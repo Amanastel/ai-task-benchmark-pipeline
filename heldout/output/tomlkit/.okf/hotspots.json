@@ -1,0 +1,154 @@
+[
+  {
+    "churn_commits": 135,
+    "coverage_percent": 80.17,
+    "file": "tomlkit/items.py",
+    "risk_score": 145593.45,
+    "symbols": 283,
+    "total_complexity": 900
+  },
+  {
+    "churn_commits": 99,
+    "coverage_percent": 87.64,
+    "file": "tomlkit/container.py",
+    "risk_score": 81091.34,
+    "symbols": 64,
+    "total_complexity": 729
+  },
+  {
+    "churn_commits": 82,
+    "coverage_percent": 96.28,
+    "file": "tomlkit/parser.py",
+    "risk_score": 45672.06,
+    "symbols": 41,
+    "total_complexity": 537
+  },
+  {
+    "churn_commits": 33,
+    "coverage_percent": 97.16,
+    "file": "tomlkit/api.py",
+    "risk_score": 1391.43,
+    "symbols": 25,
+    "total_complexity": 41
+  },
+  {
+    "churn_commits": 17,
+    "coverage_percent": 98.61,
+    "file": "tomlkit/source.py",
+    "risk_score": 1068.65,
+    "symbols": 26,
+    "total_complexity": 62
+  },
+  {
+    "churn_commits": 18,
+    "coverage_percent": 92.93,
+    "file": "tomlkit/exceptions.py",
+    "risk_score": 886.54,
+    "symbols": 40,
+    "total_complexity": 46
+  },
+  {
+    "churn_commits": 17,
+    "coverage_percent": 100.0,
+    "file": "tomlkit/_utils.py",
+    "risk_score": 459.0,
+    "symbols": 5,
+    "total_complexity": 27
+  },
+  {
+    "churn_commits": 8,
+    "coverage_percent": 97.62,
+    "file": "tomlkit/toml_file.py",
+    "risk_score": 147.43,
+    "symbols": 4,
+    "total_complexity": 18
+  },
+  {
+    "churn_commits": 13,
+    "coverage_percent": 50.0,
+    "file": "tomlkit/_compat.py",
+    "risk_score": 97.5,
+    "symbols": 1,
+    "total_complexity": 5
+  },
+  {
+    "churn_commits": 4,
+    "coverage_percent": 56.76,
+    "file": "tomlkit/_types.py",
+    "risk_score": 22.92,
+    "symbols": 2,
+    "total_complexity": 4
+  },
+  {
+    "churn_commits": 1,
+    "coverage_percent": 100.0,
+    "file": "tomlkit/toml_document.py",
+    "risk_score": 1.0,
+    "symbols": 1,
+    "total_complexity": 1
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/conftest.py",
+    "risk_score": 0.0,
+    "symbols": 6,
+    "total_complexity": 12
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/test_api.py",
+    "risk_score": 0.0,
+    "symbols": 5,
+    "total_complexity": 6
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/test_items.py",
+    "risk_score": 0.0,
+    "symbols": 11,
+    "total_complexity": 23
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/test_toml_tests.py",
+    "risk_score": 0.0,
+    "symbols": 4,
+    "total_complexity": 24
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/toml-test/gen.py",
+    "risk_score": 0.0,
+    "symbols": 10,
+    "total_complexity": 43
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests/util.py",
+    "risk_score": 0.0,
+    "symbols": 3,
+    "total_complexity": 6
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_tomlkit_api.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_tomlkit_items.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  }
+]

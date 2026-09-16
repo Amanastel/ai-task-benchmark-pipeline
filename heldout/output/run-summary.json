@@ -1,0 +1,53 @@
+{
+  "elapsed_s": 3874.6,
+  "failures": [
+    "only 3 history-derived task(s) validated; the brief requires at least 4"
+  ],
+  "head_sha": "4b38becd75405e0f38ef3e47e9839eb407591c8a",
+  "hygiene": {
+    "base_image": "python@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534",
+    "deterministic": true,
+    "failures": [],
+    "generated_tests": 33,
+    "image": "okf-tomlkit:latest",
+    "mutation_score": 0.6667,
+    "ok": true,
+    "packages_pinned": 11
+  },
+  "knowledge": {
+    "claim_verification_rate": 1.0,
+    "claims": 1696,
+    "commits": 532,
+    "coverage_contexts": true,
+    "edge_verification_rate": 0.9992,
+    "edges": 3917,
+    "failures": [],
+    "modules": 30,
+    "ok": true,
+    "symbols": 809
+  },
+  "ok": false,
+  "okfpipe_version": "1.0.0",
+  "output_repo": "heldout\\output\\tomlkit",
+  "schema": "okf/1",
+  "source": "https://github.com/sdispater/tomlkit.git",
+  "stages_run": [
+    "hygiene",
+    "knowledge",
+    "tasks"
+  ],
+  "tasks": {
+    "by_source": {
+      "excision": 2,
+      "history": 3,
+      "net-new": 1
+    },
+    "delivered": 6,
+    "distinct_modules": 4,
+    "failures": [
+      "only 3 history-derived task(s) validated; the brief requires at least 4"
+    ],
+    "ok": false,
+    "rejected": 30
+  }
+}
