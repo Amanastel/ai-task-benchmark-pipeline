@@ -1,0 +1,19 @@
+{
+  "collected": 5,
+  "duration_s": 1.98,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "8afde080c761d775c7fadf4c9e7a2d99e024bffbba96442876bce5a88363fde6",
+  "passed": 5,
+  "passing_tests": [
+    "tests_task.test_glom_core_public_api::test_covers_the_modules_own_public_api",
+    "tests_task.test_glom_core_public_api::test_declares_an_export_list",
+    "tests_task.test_glom_core_public_api::test_every_exported_name_resolves",
+    "tests_task.test_glom_core_public_api::test_export_list_is_a_list_of_strings",
+    "tests_task.test_glom_core_public_api::test_no_private_or_duplicate_names"
+  ],
+  "skipped": 0
+}

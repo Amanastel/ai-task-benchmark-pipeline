@@ -1,0 +1,98 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "glom/test/test_control_flow.py::test_switch\n\n1 test collected in 0.41s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "fd64c7eaf1ff819f0d9d0c2255845646548d807ca1c2f01fe8c7466d923e5e11",
+        "fd64c7eaf1ff819f0d9d0c2255845646548d807ca1c2f01fe8c7466d923e5e11",
+        "fd64c7eaf1ff819f0d9d0c2255845646548d807ca1c2f01fe8c7466d923e5e11"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "9bd27c729eec12994bd929b38d5844e46d042d6b710deffc5d50ef9c94fda810",
+        "9bd27c729eec12994bd929b38d5844e46d042d6b710deffc5d50ef9c94fda810",
+        "9bd27c729eec12994bd929b38d5844e46d042d6b710deffc5d50ef9c94fda810"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 1,
+        "duration_s": 1.69,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 1,
+        "failing_tests": [
+          "glom.test.test_control_flow::test_switch"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "fd64c7eaf1ff819f0d9d0c2255845646548d807ca1c2f01fe8c7466d923e5e11",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 1,
+        "duration_s": 1.69,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "9bd27c729eec12994bd929b38d5844e46d042d6b710deffc5d50ef9c94fda810",
+        "passed": 1,
+        "passing_tests": [
+          "glom.test.test_control_flow::test_switch"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "hist-70c3d9cc",
+  "valid": true
+}

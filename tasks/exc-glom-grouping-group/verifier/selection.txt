@@ -1,0 +1,12 @@
+glom/test/test_error.py::test_all_public_errors
+glom/test/test_grouping.py::test_agg
+glom/test/test_grouping.py::test_bucketing
+glom/test/test_grouping.py::test_corner_cases
+glom/test/test_grouping.py::test_limit
+glom/test/test_grouping.py::test_sample
+tests_generated/test_doctests_glom_grouping.py::test_doctest_Avg
+tests_generated/test_doctests_glom_grouping.py::test_doctest_First
+tests_generated/test_doctests_glom_grouping.py::test_doctest_Group
+tests_generated/test_doctests_glom_grouping.py::test_doctest_Limit
+tests_generated/test_doctests_glom_grouping.py::test_doctest_Max
+tests_generated/test_doctests_glom_grouping.py::test_doctest_Min

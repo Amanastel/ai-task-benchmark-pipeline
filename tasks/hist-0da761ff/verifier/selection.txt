@@ -1,0 +1,2 @@
+glom/test/test_reduction.py::test_merge
+glom/test/test_reduction.py::test_merge_omd

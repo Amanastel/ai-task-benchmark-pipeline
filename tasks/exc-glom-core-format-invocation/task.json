@@ -1,0 +1,51 @@
+{
+  "difficulty": "hard",
+  "difficulty_rationale": "The removed body is 15 lines with cyclomatic complexity 9, so the contract has many branches the docstring only summarises. The agent must recover edge-case behaviour -- error paths and boundary handling -- that no single sentence states.",
+  "files_in_scope": [
+    "glom/core.py"
+  ],
+  "id": "exc-glom-core-format-invocation",
+  "instruction": "The body of `glom.core.format_invocation` in `glom/core.py` has been removed and replaced with a stub that raises `NotImplementedError`. Its signature and docstring are intact and are the authoritative statement of what it must do.\n\nContract, as documented:\n    Given a name, positional arguments, and keyword arguments, format a basic Python-style function call.\n\nImplement the function so that it fulfils that contract. The rest of the module is unchanged and shows how the function is called and what its callers expect back.\n\nScope: only `glom/core.py` needs to change. The verifier runs 26 existing test(s) that already exercise this function; they were written against the original implementation and are unmodified. Any implementation satisfying them is accepted -- matching the original line for line is not required.\n",
+  "modules": [
+    "glom.core"
+  ],
+  "notes": [],
+  "provenance": {
+    "detector": "glom/core.py:582",
+    "excision_target": "glom.core.format_invocation",
+    "kind": "excision"
+  },
+  "title": "Implement glom.core.format_invocation",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_basic.py::test_coalesce",
+      "glom/test/test_basic.py::test_invoke",
+      "glom/test/test_check.py::test_check_basic",
+      "glom/test/test_error.py::test_all_public_errors",
+      "glom/test/test_error.py::test_coalesce_stack",
+      "glom/test/test_grouping.py::test_agg",
+      "glom/test/test_path_and_t.py::test_path_access_error_message",
+      "glom/test/test_path_and_t.py::test_path_t_roundtrip",
+      "glom/test/test_path_and_t.py::test_t_picklability",
+      "glom/test/test_reduction.py::test_flatten",
+      "glom/test/test_reduction.py::test_fold",
+      "glom/test/test_reduction.py::test_sum_integers",
+      "glom/test/test_scope_vars.py::test_let",
+      "glom/test/test_scope_vars.py::test_s_scope_assign",
+      "glom/test/test_scope_vars.py::test_vars",
+      "glom/test/test_streaming.py::test_all",
+      "glom/test/test_streaming.py::test_faulty_iterate",
+      "glom/test/test_streaming.py::test_filter",
+      "glom/test/test_streaming.py::test_first",
+      "glom/test/test_streaming.py::test_map",
+      "glom/test/test_streaming.py::test_slice",
+      "glom/test/test_streaming.py::test_split_flatten",
+      "glom/test/test_streaming.py::test_unique",
+      "glom/test/test_streaming.py::test_windowed",
+      "tests_generated/test_doctests_glom_core.py::test_doctest_TType",
+      "tests_generated/test_doctests_glom_core.py::test_doctest_format_invocation"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collected": 2,
+  "duration_s": 1.49,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "7c284d0159f4f6e08eaa84967905245650e6046ffbb519106fff14c8290d23e8",
+  "passed": 2,
+  "passing_tests": [
+    "glom.test.test_target_types::test_default_scope_register",
+    "glom.test.test_target_types::test_faulty_iterate"
+  ],
+  "skipped": 0
+}

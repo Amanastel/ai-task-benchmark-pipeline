@@ -1,0 +1,28 @@
+{
+  "collected": 6,
+  "duration_s": 2.01,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 6,
+  "failing_tests": [
+    "tests_task.test_glom_core_path_hashable::test_equal_instances_hash_equally",
+    "tests_task.test_glom_core_path_hashable::test_hash_is_stable_across_calls",
+    "tests_task.test_glom_core_path_hashable::test_instances_are_hashable",
+    "tests_task.test_glom_core_path_hashable::test_set_deduplicates_equal_instances",
+    "tests_task.test_glom_core_path_hashable::test_unequal_instances_remain_distinct",
+    "tests_task.test_glom_core_path_hashable::test_usable_as_dict_key"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "tests_task.test_glom_core_path_hashable::test_equal_instances_hash_equally": "TypeError: unhashable type: 'Path'\ndef test_equal_instances_hash_equally():\n        a, b = _equal_pair()\n        assert a == b, \"precondition: the two constructed instances compare equal\"\n>       assert hash(a) == hash(b), (\n               ^^^^^^^\n            \"objects that compare equal must have equal hashes\"\n        )\nE       TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:36: TypeError",
+    "tests_task.test_glom_core_path_hashable::test_hash_is_stable_across_calls": "TypeError: unhashable type: 'Path'\ndef test_hash_is_stable_across_calls():\n        a, _b = _equal_pair()\n>       assert hash(a) == hash(a), \"hashing the same object twice must agree\"\n               ^^^^^^^\nE       TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:51: TypeError",
+    "tests_task.test_glom_core_path_hashable::test_instances_are_hashable": "Failed: Path instances must be hashable so they can be used as dict keys and set members, but hash() raised: unhashable type: 'Path'\ndef test_instances_are_hashable():\n        a, _b = _equal_pair()\n        try:\n>           hash(a)\nE           TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:25: TypeError\n\nDuring handling of the above exception, another exception occurred:\n\n    def test_instances_are_hashable():\n        a, _b = _equal_pair()\n        try:\n            hash(a)\n        except TypeError as exc:\n>           pytest.fail(\n                \"Path instances must be hashable so they can be used as dict keys \"\n                f\"and set members, but hash() raised: {exc}\"\n            )\nE           Failed: Path instances must be hashable so they can be used as dict keys and set members, but hash() raised: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:27: Failed",
+    "tests_task.test_glom_core_path_hashable::test_set_deduplicates_equal_instances": "TypeError: unhashable type: 'Path'\ndef test_set_deduplicates_equal_instances():\n        a, b = _equal_pair()\n>       assert len({a, b}) == 1, \"equal instances must collapse to one set element\"\n                   ^^^^^^\nE       TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:56: TypeError",
+    "tests_task.test_glom_core_path_hashable::test_unequal_instances_remain_distinct": "TypeError: unhashable type: 'Path'\ndef test_unequal_instances_remain_distinct():\n        a, _b = _equal_pair()\n        other = _different()\n        assert a != other, \"precondition: the instances differ\"\n>       assert len({a, other}) == 2, (\n                   ^^^^^^^^^^\n            \"instances that are not equal must not be collapsed by the set\"\n        )\nE       TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:63: TypeError",
+    "tests_task.test_glom_core_path_hashable::test_usable_as_dict_key": "TypeError: unhashable type: 'Path'\ndef test_usable_as_dict_key():\n        a, b = _equal_pair()\n>       mapping = {a: \"value\"}\n                  ^^^^^^^^^^^^\nE       TypeError: unhashable type: 'Path'\n\ntests_task/test_glom_core_path_hashable.py:43: TypeError"
+  },
+  "fingerprint": "4479f16d5e27c40b69c00aeb467e5c7a5366749b2df2aa99b5537287e8cbd811",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}

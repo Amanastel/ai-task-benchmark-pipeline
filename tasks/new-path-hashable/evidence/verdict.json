@@ -1,0 +1,108 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "tests_task/test_glom_core_path_hashable.py::test_instances_are_hashable\ntests_task/test_glom_core_path_hashable.py::test_equal_instances_hash_equally\ntests_task/test_glom_core_path_hashable.py::test_usable_as_dict_key\ntests_task/test_glom_core_path_hashable.py::test_hash_is_stable_across_calls\ntests_task/test_glom_core_path_hashable.py::test_set_deduplicates_equal_instances\ntests_task/test_glom_core_path_hashable.py::test_unequal_instances_remain_distinct\n\n6 tests collected in 0.25s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "4479f16d5e27c40b69c00aeb467e5c7a5366749b2df2aa99b5537287e8cbd811",
+        "4479f16d5e27c40b69c00aeb467e5c7a5366749b2df2aa99b5537287e8cbd811",
+        "4479f16d5e27c40b69c00aeb467e5c7a5366749b2df2aa99b5537287e8cbd811"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "1850c482ccae7c845b7286ccb89d27696a0cebb560a54bcc23abdd659cafd8bd",
+        "1850c482ccae7c845b7286ccb89d27696a0cebb560a54bcc23abdd659cafd8bd",
+        "1850c482ccae7c845b7286ccb89d27696a0cebb560a54bcc23abdd659cafd8bd"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 6,
+        "duration_s": 2.01,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 6,
+        "failing_tests": [
+          "tests_task.test_glom_core_path_hashable::test_equal_instances_hash_equally",
+          "tests_task.test_glom_core_path_hashable::test_hash_is_stable_across_calls",
+          "tests_task.test_glom_core_path_hashable::test_instances_are_hashable",
+          "tests_task.test_glom_core_path_hashable::test_set_deduplicates_equal_instances",
+          "tests_task.test_glom_core_path_hashable::test_unequal_instances_remain_distinct",
+          "tests_task.test_glom_core_path_hashable::test_usable_as_dict_key"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "4479f16d5e27c40b69c00aeb467e5c7a5366749b2df2aa99b5537287e8cbd811",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 6,
+        "duration_s": 1.85,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "1850c482ccae7c845b7286ccb89d27696a0cebb560a54bcc23abdd659cafd8bd",
+        "passed": 6,
+        "passing_tests": [
+          "tests_task.test_glom_core_path_hashable::test_equal_instances_hash_equally",
+          "tests_task.test_glom_core_path_hashable::test_hash_is_stable_across_calls",
+          "tests_task.test_glom_core_path_hashable::test_instances_are_hashable",
+          "tests_task.test_glom_core_path_hashable::test_set_deduplicates_equal_instances",
+          "tests_task.test_glom_core_path_hashable::test_unequal_instances_remain_distinct",
+          "tests_task.test_glom_core_path_hashable::test_usable_as_dict_key"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "new-path-hashable",
+  "valid": true
+}

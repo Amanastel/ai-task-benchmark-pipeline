@@ -1,0 +1,107 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "tests_task/test_glom_core_public_api.py::test_declares_an_export_list\ntests_task/test_glom_core_public_api.py::test_export_list_is_a_list_of_strings\ntests_task/test_glom_core_public_api.py::test_every_exported_name_resolves\ntests_task/test_glom_core_public_api.py::test_no_private_or_duplicate_names\ntests_task/test_glom_core_public_api.py::test_covers_the_modules_own_public_api\n\n5 tests collected in 0.10s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "d13f2a64aac9ee835ccc4f80fe3424937f73bd37f73c68fe8b97241ff14e8a91",
+        "d13f2a64aac9ee835ccc4f80fe3424937f73bd37f73c68fe8b97241ff14e8a91",
+        "d13f2a64aac9ee835ccc4f80fe3424937f73bd37f73c68fe8b97241ff14e8a91"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "8afde080c761d775c7fadf4c9e7a2d99e024bffbba96442876bce5a88363fde6",
+        "8afde080c761d775c7fadf4c9e7a2d99e024bffbba96442876bce5a88363fde6",
+        "8afde080c761d775c7fadf4c9e7a2d99e024bffbba96442876bce5a88363fde6"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 5,
+        "duration_s": 2.06,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 3,
+        "failing_tests": [
+          "tests_task.test_glom_core_public_api::test_covers_the_modules_own_public_api",
+          "tests_task.test_glom_core_public_api::test_declares_an_export_list",
+          "tests_task.test_glom_core_public_api::test_export_list_is_a_list_of_strings"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "d13f2a64aac9ee835ccc4f80fe3424937f73bd37f73c68fe8b97241ff14e8a91",
+        "passed": 2,
+        "passing_tests": [
+          "tests_task.test_glom_core_public_api::test_every_exported_name_resolves",
+          "tests_task.test_glom_core_public_api::test_no_private_or_duplicate_names"
+        ],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 5,
+        "duration_s": 1.98,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "8afde080c761d775c7fadf4c9e7a2d99e024bffbba96442876bce5a88363fde6",
+        "passed": 5,
+        "passing_tests": [
+          "tests_task.test_glom_core_public_api::test_covers_the_modules_own_public_api",
+          "tests_task.test_glom_core_public_api::test_declares_an_export_list",
+          "tests_task.test_glom_core_public_api::test_every_exported_name_resolves",
+          "tests_task.test_glom_core_public_api::test_export_list_is_a_list_of_strings",
+          "tests_task.test_glom_core_public_api::test_no_private_or_duplicate_names"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "new-glom-core-public-api",
+  "valid": true
+}

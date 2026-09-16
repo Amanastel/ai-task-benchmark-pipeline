@@ -1,0 +1,15 @@
+{
+  "collected": 1,
+  "duration_s": 1.69,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "9bd27c729eec12994bd929b38d5844e46d042d6b710deffc5d50ef9c94fda810",
+  "passed": 1,
+  "passing_tests": [
+    "glom.test.test_control_flow::test_switch"
+  ],
+  "skipped": 0
+}

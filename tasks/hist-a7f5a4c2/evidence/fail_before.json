@@ -1,0 +1,20 @@
+{
+  "collected": 2,
+  "duration_s": 1.92,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 2,
+  "failing_tests": [
+    "glom.test.test_basic::test_api_repr",
+    "glom.test.test_mutation::test_assign"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "glom.test.test_basic::test_api_repr": "AssertionError: assert {'Assign', 'C...', 'Coalesce'} == {'Check', 'Coalesce'}\n  \n  Extra items in the left set:\n  'Assign'\n  Use -v to get more diff\n@pytest.mark.skipif(_IS_PYPY, reason='pypy othertype.__repr__ is never object.__repr__')\n    def test_api_repr():\n        import glom\n    \n        spec_types_wo_reprs = []\n        for k, v in glom.__dict__.items():\n            if not callable(getattr(v, 'glomit', None)):\n                continue\n            if v.__repr__ is object.__repr__:\n                spec_types_wo_reprs.append(k)\n    \n        # TODO: this should be empty\n>       assert set(spec_types_wo_reprs) == set(['Coalesce', 'Check'])\nE       AssertionError: assert {'Assign', 'C...', 'Coalesce'} == {'Check', 'Coalesce'}\nE         \nE         Extra items in the left set:\nE         'Assign'\nE         Use -v to get more diff\n\nglom/test/test_basic.py:420: AssertionError",
+    "glom.test.test_mutation::test_assign": "AssertionError: assert '<glom.mutati...7b132ad56990>' == 'Assign(T.a, 1)'\n  \n  - Assign(T.a, 1)\n  + <glom.mutation.Assign object at 0x7b132ad56990>\ndef test_assign():\n        class Foo(object):\n            pass\n    \n        assert glom({}, Assign(T['a'], 1)) == {'a': 1}\n        assert glom({'a': {}}, Assign(T['a']['a'], 1)) == {'a': {'a': 1}}\n        assert glom({'a': {}}, Assign('a.a', 1)) == {'a': {'a': 1}}\n        assert glom(Foo(), Assign(T.a, 1)).a == 1\n        assert glom({}, Assign('a', 1)) == {'a': 1}\n        assert glom(Foo(), Assign('a', 1)).a == 1\n        assert glom({'a': Foo()}, Assign('a.a', 1))['a'].a == 1\n        def r():\n            r = {}\n            r['r'] = r\n            return r\n        assert glom(r(), Assign('r.r.r.r.r.r.r.r.r', 1)) == {'r': 1}\n        assert glom(r(), Assign(T['r']['r']['r']['r'], 1)) == {'r': 1}\n        assert glom(r(), Assign(Path('r', 'r', T['r']), 1)) == {'r': 1}\n        assert assign(r(), Path('r', 'r', T['r']), 1) == {'r': 1}\n        with pytest.raises(TypeError, match='path argument must be'):\n            Assign(1, 'a')\n        with pytest.raises(ValueError, match='path must have at least one element'):\n            Assign(T, 1)\n    \n>       assert repr(Assign(T.a, 1)) == 'Assign(T.a, 1)'\nE       AssertionError: assert '<glom.mutati...7b132ad56990>' == 'Assign(T.a, 1)'\nE         \nE         - Assign(T.a, 1)\nE         + <glom.mutation.Assign object at 0x7b132ad56990>\n\nglom/test/test_mutation.py:32: AssertionError"
+  },
+  "fingerprint": "6d1ab0b1ad52a433b806ed7de3ecd6344c36afc4b57136ef9121c0662e9815db",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}

@@ -1,0 +1,20 @@
+{
+  "collected": 2,
+  "duration_s": 1.69,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 2,
+  "failing_tests": [
+    "glom.test.test_reduction::test_merge",
+    "glom.test.test_reduction::test_merge_omd"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "glom.test.test_reduction::test_merge": "TypeError: expected \"op\" to be callable, not 'update_extend'\ndef test_merge():\n    \n        target = [{'a': 'A'}, {'b': 'B'}]\n    \n        assert glom(target, Merge()) == {'a': 'A', 'b': 'B'}\n    \n        assert glom(target, Merge(op=dict.update)) == {'a': 'A', 'b': 'B'}\n    \n        with pytest.raises(ValueError):\n            Merge(init=list)  # has no .update()\n    \n        with pytest.raises(ValueError):\n>           Merge(op='update_extend')  # doesn't work on base dict, the default init\n            ^^^^^^^^^^^^^^^^^^^^^^^^^\n\nglom/test/test_reduction.py:131: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <[AttributeError(\"'Merge' object has no attribute 'subspec'\") raised in repr()] Merge object at 0x794c1765b6d0>\nsubspec = T, init = <class 'dict'>, op = 'update_extend'\n\n    def __init__(self, subspec=T, init=dict, op=None):\n        if op is None:\n            try:\n                op = init.update\n                op(init(), init())  # take it out for a spin\n            except AttributeError:\n                raise ValueError('expected \"op\" arg or an init type with update method,'\n                                 ' not %r and %r' % (op, init))\n        elif not callable(op):\n>           raise TypeError('expected \"op\" to be callable, not %r' % op)\nE           TypeError: expected \"op\" to be callable, not 'update_extend'\n\nglom/reduction.py:164: TypeError",
+    "glom.test.test_reduction::test_merge_omd": "TypeError: expected \"op\" to be callable, not 'update_extend'\ndef test_merge_omd():\n        target = [{'a': 'A'}, {'a': 'aleph'}]\n    \n        assert glom(target, Merge(init=OMD)) == OMD({'a': 'aleph'})\n>       assert glom(target, Merge(init=OMD, op='update_extend')) == OMD([('a', 'A'), ('a', 'aleph')])\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nglom/test/test_reduction.py:138: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <[AttributeError(\"'Merge' object has no attribute 'subspec'\") raised in repr()] Merge object at 0x794c1742af50>\nsubspec = T, init = <class 'boltons.dictutils.OrderedMultiDict'>\nop = 'update_extend'\n\n    def __init__(self, subspec=T, init=dict, op=None):\n        if op is None:\n            try:\n                op = init.update\n                op(init(), init())  # take it out for a spin\n            except AttributeError:\n                raise ValueError('expected \"op\" arg or an init type with update method,'\n                                 ' not %r and %r' % (op, init))\n        elif not callable(op):\n>           raise TypeError('expected \"op\" to be callable, not %r' % op)\nE           TypeError: expected \"op\" to be callable, not 'update_extend'\n\nglom/reduction.py:164: TypeError"
+  },
+  "fingerprint": "ae64fda7564f16290ee1f1d2b16057d8f55e89363c7903fdf37f5e4f8e27cc81",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}

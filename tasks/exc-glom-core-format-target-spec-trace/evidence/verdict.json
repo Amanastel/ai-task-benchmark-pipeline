@@ -1,0 +1,152 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "test_nesting_stack\nglom/test/test_error.py::test_pae_scope_printable\nglom/test/test_error.py::test_partially_failing_branch\nglom/test/test_error.py::test_regular_error_stack\nglom/test/test_error.py::test_unicode_stack\nglom/test/test_match.py::test_check_ported_tests\nglom/test/test_mutation.py::test_bad_assign_target\nglom/test/test_mutation.py::test_bad_delete_target\nglom/test/test_mutation.py::test_sequence_assign\nglom/test/test_mutation.py::test_sequence_delete\nglom/test/test_mutation.py::test_unregistered_assign\nglom/test/test_mutation.py::test_unregistered_delete\nglom/test/test_path_and_t.py::test_path_access_error_message\nglom/test/test_path_and_t.py::test_t_arithmetic_errors\nglom/test/test_spec.py::test_spec\nglom/test/test_target_types.py::test_types_bare\n\n28 tests collected in 0.88s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d",
+        "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d",
+        "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7",
+        "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7",
+        "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 28,
+        "duration_s": 3.17,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 28,
+        "failing_tests": [
+          "glom.test.test_check::test_check_basic",
+          "glom.test.test_check::test_check_multi",
+          "glom.test.test_cli::test_main_basic",
+          "glom.test.test_error::test_3_11_byte_code_caret",
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_error::test_branching_stack",
+          "glom.test.test_error::test_coalesce_stack",
+          "glom.test.test_error::test_glom_dev_debug",
+          "glom.test.test_error::test_glom_error_double_stack",
+          "glom.test.test_error::test_glom_error_stack",
+          "glom.test.test_error::test_long_target_repr",
+          "glom.test.test_error::test_midway_branch",
+          "glom.test.test_error::test_nesting_stack",
+          "glom.test.test_error::test_pae_scope_printable",
+          "glom.test.test_error::test_partially_failing_branch",
+          "glom.test.test_error::test_regular_error_stack",
+          "glom.test.test_error::test_unicode_stack",
+          "glom.test.test_match::test_check_ported_tests",
+          "glom.test.test_mutation::test_bad_assign_target",
+          "glom.test.test_mutation::test_bad_delete_target",
+          "glom.test.test_mutation::test_sequence_assign",
+          "glom.test.test_mutation::test_sequence_delete",
+          "glom.test.test_mutation::test_unregistered_assign",
+          "glom.test.test_mutation::test_unregistered_delete",
+          "glom.test.test_path_and_t::test_path_access_error_message",
+          "glom.test.test_path_and_t::test_t_arithmetic_errors",
+          "glom.test.test_spec::test_spec",
+          "glom.test.test_target_types::test_types_bare"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 28,
+        "passed": 240
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 28,
+        "duration_s": 2.07,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7",
+        "passed": 28,
+        "passing_tests": [
+          "glom.test.test_check::test_check_basic",
+          "glom.test.test_check::test_check_multi",
+          "glom.test.test_cli::test_main_basic",
+          "glom.test.test_error::test_3_11_byte_code_caret",
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_error::test_branching_stack",
+          "glom.test.test_error::test_coalesce_stack",
+          "glom.test.test_error::test_glom_dev_debug",
+          "glom.test.test_error::test_glom_error_double_stack",
+          "glom.test.test_error::test_glom_error_stack",
+          "glom.test.test_error::test_long_target_repr",
+          "glom.test.test_error::test_midway_branch",
+          "glom.test.test_error::test_nesting_stack",
+          "glom.test.test_error::test_pae_scope_printable",
+          "glom.test.test_error::test_partially_failing_branch",
+          "glom.test.test_error::test_regular_error_stack",
+          "glom.test.test_error::test_unicode_stack",
+          "glom.test.test_match::test_check_ported_tests",
+          "glom.test.test_mutation::test_bad_assign_target",
+          "glom.test.test_mutation::test_bad_delete_target",
+          "glom.test.test_mutation::test_sequence_assign",
+          "glom.test.test_mutation::test_sequence_delete",
+          "glom.test.test_mutation::test_unregistered_assign",
+          "glom.test.test_mutation::test_unregistered_delete",
+          "glom.test.test_path_and_t::test_path_access_error_message",
+          "glom.test.test_path_and_t::test_t_arithmetic_errors",
+          "glom.test.test_spec::test_spec",
+          "glom.test.test_target_types::test_types_bare"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "exc-glom-core-format-target-spec-trace",
+  "valid": true
+}

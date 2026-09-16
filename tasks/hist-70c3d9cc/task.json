@@ -1,0 +1,29 @@
+{
+  "difficulty": "medium",
+  "difficulty_rationale": "A single-module change of 35 lines constrained by 1 distinct behaviours. The contract is discoverable from the surrounding code, but the agent must infer which of several plausible readings the tests encode rather than guessing from the symptom alone.",
+  "files_in_scope": [
+    "glom/control_flow.py"
+  ],
+  "id": "hist-70c3d9cc",
+  "instruction": "This repository has an incomplete behaviour in `glom.control_flow`.\n\nSummary of the problem, as reported: more tests, cleaner control flow in Switch.glomit.\n\nRunning the graded checks against this tree currently produces 1 failure(s):\n\n  - **switch** - observed: `assert glom({'c': None}, Switch(cases2)) == 3`\n\nChange the implementation so that these behaviours hold. Work out the intended semantics from the surrounding code and from how the affected functions are used elsewhere in the package.\n\nScope: the change belongs in `glom/control_flow.py`. You may read anything in the repository, but the graded test files are replaced with a reference copy before grading, so editing them has no effect.\n\nSuccess is measured only by observable behaviour: any implementation that makes the failing cases pass, without breaking any test that currently passes, is accepted. No particular structure, helper name or code shape is required.\n",
+  "modules": [
+    "glom.control_flow"
+  ],
+  "notes": [],
+  "provenance": {
+    "commit_date": "2020-07-05T10:55:02-07:00",
+    "commit_sha": "70c3d9cc3f09bd0bd72ab96c5bbc78839b7fa6ea",
+    "commit_subject": "more tests, cleaner control flow in Switch.glomit",
+    "kind": "history",
+    "parent_sha": "b4215902bf02a9bd97ca68ac6d4fe9ff6b1ee81a",
+    "upstream_url": "https://github.com/mahmoud/glom/commit/70c3d9cc3f09bd0bd72ab96c5bbc78839b7fa6ea"
+  },
+  "title": "glom.control_flow: Cleaner control flow in Switch.glomit",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_control_flow.py::test_switch"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

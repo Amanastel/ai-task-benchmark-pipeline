@@ -1,0 +1,36 @@
+# This repository is authored on Windows and consumed inside Linux containers.
+# Without this, git's autocrlf would check the shell scripts out with CRLF line
+# endings, and `docker run ... ./run-tests.sh` fails with a bare
+# "not found" -- the kernel treats the trailing \r as part of the interpreter
+# path on the shebang line. That failure looks like a missing file, not like a
+# line-ending problem, so it is worth pinning explicitly.
+
+* text=auto eol=lf
+
+*.sh      text eol=lf
+*.py      text eol=lf
+*.toml    text eol=lf
+*.cfg     text eol=lf
+*.ini     text eol=lf
+*.json    text eol=lf
+*.jsonl   text eol=lf
+*.md      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.txt     text eol=lf
+*.lock    text eol=lf
+*.rst     text eol=lf
+Dockerfile        text eol=lf
+.dockerignore     text eol=lf
+.gitignore        text eol=lf
+
+# Keep the executable bit on the entry points.
+run.sh            text eol=lf
+run-tests.sh      text eol=lf
+
+*.png     binary
+*.jpg     binary
+*.ico     binary
+*.gz      binary
+*.tar     binary
+*.whl     binary

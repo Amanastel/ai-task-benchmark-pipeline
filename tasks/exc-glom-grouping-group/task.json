@@ -1,0 +1,37 @@
+{
+  "difficulty": "hard",
+  "difficulty_rationale": "The removed body is 52 lines with cyclomatic complexity 19, so the contract has many branches the docstring only summarises. The agent must recover edge-case behaviour -- error paths and boundary handling -- that no single sentence states.",
+  "files_in_scope": [
+    "glom/grouping.py"
+  ],
+  "id": "exc-glom-grouping-group",
+  "instruction": "The body of `glom.grouping.GROUP` in `glom/grouping.py` has been removed and replaced with a stub that raises `NotImplementedError`. Its signature and docstring are intact and are the authoritative statement of what it must do.\n\nContract, as documented:\n    Group mode dispatcher; also sentinel for current mode = group\n\nImplement the function so that it fulfils that contract. The rest of the module is unchanged and shows how the function is called and what its callers expect back.\n\nScope: only `glom/grouping.py` needs to change. The verifier runs 12 existing test(s) that already exercise this function; they were written against the original implementation and are unmodified. Any implementation satisfying them is accepted -- matching the original line for line is not required.\n",
+  "modules": [
+    "glom.grouping"
+  ],
+  "notes": [],
+  "provenance": {
+    "detector": "glom/grouping.py:100",
+    "excision_target": "glom.grouping.GROUP",
+    "kind": "excision"
+  },
+  "title": "Implement glom.grouping.GROUP",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_error.py::test_all_public_errors",
+      "glom/test/test_grouping.py::test_agg",
+      "glom/test/test_grouping.py::test_bucketing",
+      "glom/test/test_grouping.py::test_corner_cases",
+      "glom/test/test_grouping.py::test_limit",
+      "glom/test/test_grouping.py::test_sample",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_Avg",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_First",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_Group",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_Limit",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_Max",
+      "tests_generated/test_doctests_glom_grouping.py::test_doctest_Min"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

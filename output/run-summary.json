@@ -1,0 +1,25 @@
+{
+  "elapsed_s": 494.5,
+  "failures": [],
+  "head_sha": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+  "ok": true,
+  "okfpipe_version": "1.0.0",
+  "output_repo": "output\\glom",
+  "schema": "okf/1",
+  "source": "https://github.com/mahmoud/glom.git",
+  "stages_run": [
+    "tasks"
+  ],
+  "tasks": {
+    "by_source": {
+      "excision": 3,
+      "history": 5,
+      "net-new": 2
+    },
+    "delivered": 10,
+    "distinct_modules": 6,
+    "failures": [],
+    "ok": true,
+    "rejected": 12
+  }
+}

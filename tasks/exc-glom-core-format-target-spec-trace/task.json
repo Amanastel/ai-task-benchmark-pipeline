@@ -1,0 +1,53 @@
+{
+  "difficulty": "hard",
+  "difficulty_rationale": "The removed body is 36 lines with cyclomatic complexity 12, so the contract has many branches the docstring only summarises. The agent must recover edge-case behaviour -- error paths and boundary handling -- that no single sentence states.",
+  "files_in_scope": [
+    "glom/core.py"
+  ],
+  "id": "exc-glom-core-format-target-spec-trace",
+  "instruction": "The body of `glom.core.format_target_spec_trace` in `glom/core.py` has been removed and replaced with a stub that raises `NotImplementedError`. Its signature and docstring are intact and are the authoritative statement of what it must do.\n\nContract, as documented:\n    unpack a scope into a multi-line but short summary\n\nImplement the function so that it fulfils that contract. The rest of the module is unchanged and shows how the function is called and what its callers expect back.\n\nScope: only `glom/core.py` needs to change. The verifier runs 28 existing test(s) that already exercise this function; they were written against the original implementation and are unmodified. Any implementation satisfying them is accepted -- matching the original line for line is not required.\n",
+  "modules": [
+    "glom.core"
+  ],
+  "notes": [],
+  "provenance": {
+    "detector": "glom/core.py:243",
+    "excision_target": "glom.core.format_target_spec_trace",
+    "kind": "excision"
+  },
+  "title": "Implement glom.core.format_target_spec_trace",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_check.py::test_check_basic",
+      "glom/test/test_check.py::test_check_multi",
+      "glom/test/test_cli.py::test_main_basic",
+      "glom/test/test_error.py::test_3_11_byte_code_caret",
+      "glom/test/test_error.py::test_all_public_errors",
+      "glom/test/test_error.py::test_branching_stack",
+      "glom/test/test_error.py::test_coalesce_stack",
+      "glom/test/test_error.py::test_glom_dev_debug",
+      "glom/test/test_error.py::test_glom_error_double_stack",
+      "glom/test/test_error.py::test_glom_error_stack",
+      "glom/test/test_error.py::test_long_target_repr",
+      "glom/test/test_error.py::test_midway_branch",
+      "glom/test/test_error.py::test_nesting_stack",
+      "glom/test/test_error.py::test_pae_scope_printable",
+      "glom/test/test_error.py::test_partially_failing_branch",
+      "glom/test/test_error.py::test_regular_error_stack",
+      "glom/test/test_error.py::test_unicode_stack",
+      "glom/test/test_match.py::test_check_ported_tests",
+      "glom/test/test_mutation.py::test_bad_assign_target",
+      "glom/test/test_mutation.py::test_bad_delete_target",
+      "glom/test/test_mutation.py::test_sequence_assign",
+      "glom/test/test_mutation.py::test_sequence_delete",
+      "glom/test/test_mutation.py::test_unregistered_assign",
+      "glom/test/test_mutation.py::test_unregistered_delete",
+      "glom/test/test_path_and_t.py::test_path_access_error_message",
+      "glom/test/test_path_and_t.py::test_t_arithmetic_errors",
+      "glom/test/test_spec.py::test_spec",
+      "glom/test/test_target_types.py::test_types_bare"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

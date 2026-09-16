@@ -1,0 +1,2 @@
+glom/test/test_flat.py::test_sum_integers
+glom/test/test_flat.py::test_sum_seqs

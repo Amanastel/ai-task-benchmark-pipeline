@@ -1,0 +1,20 @@
+{
+  "collected": 2,
+  "duration_s": 1.52,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 2,
+  "failing_tests": [
+    "glom.test.test_target_types::test_default_scope_register",
+    "glom.test.test_target_types::test_faulty_iterate"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "glom.test.test_target_types::test_default_scope_register": "TypeError: '_SpecRegistry' object is not subscriptable\ndef test_default_scope_register():\n        # just hit it to make sure it exists, it behaves exactly like Glommer.register\n>       glom.register(type, exact=False)\n\nglom/test/test_target_types.py:181: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntarget_type = <class 'type'>, get = None, iterate = None, exact = False\n\n    def register(target_type, get=None, iterate=None, exact=False):\n        \"\"\"Register *target_type* so :meth:`~Glommer.glom()` will\n        know how to handle instances of that type as targets.\n    \n        Args:\n           target_type (type): A type expected to appear in a glom()\n              call target\n           get (callable): A function which takes a target object and\n              a name, acting as a default accessor. Defaults to\n              :func:`getattr`.\n           iterate (callable): A function which takes a target object\n              and returns an iterator. Defaults to :func:`iter` if\n              *target_type* appears to be iterable.\n           exact (bool): Whether or not to match instances of subtypes\n              of *target_type*.\n    \n        .. note::\n    \n           The module-level :func:`register()` function affects the\n           module-level :func:`glom()` function's behavior. If this\n           global effect is undesirable for your application, or\n           you're implementing a library, consider instantiating a\n           :class:`Glommer",
+    "glom.test.test_target_types::test_faulty_iterate": "RuntimeError: oops\ndef test_faulty_iterate():\n        glommer = Glommer()\n    \n        def bad_iter(obj):\n            raise RuntimeError('oops')\n    \n        glommer.register(str, iterate=bad_iter)\n    \n        with pytest.raises(TypeError):\n>           glommer.glom({'a': 'fail'}, ('a', {'chars': [str]}))\n\nglom/test/test_target_types.py:193: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nglom/core.py:1166: in glom\n    return glom(target, spec, scope=self.scope, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:1050: in glom\n    ret = _glom(target, spec, scope)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:1061: in _glom\n    return scope[_SpecRegistry].get_handler(spec)(spec, target, scope)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:846: in _handle_tuple\n    res = scope[glom](res, subspec, scope)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:1061: in _glom\n    return scope[_SpecRegistry].get_handler(spec)(spec, target, scope)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:817: in _handle_dict\n    val = scope[glom](target, subspec, scope)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:1061: in _glom\n    return scope[_SpecRegistry].get_handler(spec)(spec, target, scope)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nglom/core.py:830: in _handle_list\n    iterator = handler.iterate(target)\n"
+  },
+  "fingerprint": "e474981e5ff4dc7d948ab741e40b3ee5065604127e1fe309266075cfe65233e3",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}

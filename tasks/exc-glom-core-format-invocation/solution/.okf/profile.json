@@ -1,0 +1,65 @@
+{
+  "build_backend": "setuptools",
+  "build_requires": [
+    "setuptools>=68",
+    "wheel"
+  ],
+  "console_scripts": {
+    "glom": "glom.cli:console_main"
+  },
+  "ecosystem": "python",
+  "extra_test_requirements": [],
+  "extras": {
+    "test": [
+      "pytest>=6.2.5",
+      "PyYAML",
+      "tomli; python_version<\"3.11\"",
+      "coverage"
+    ],
+    "toml": [
+      "tomli; python_version<\"3.11\""
+    ],
+    "yaml": [
+      "PyYAML"
+    ]
+  },
+  "has_dockerfile": false,
+  "has_lock": false,
+  "lint_configs": [],
+  "manifest_files": [
+    "setup.py"
+  ],
+  "name": "glom",
+  "notes": [],
+  "packages": [
+    {
+      "is_package": true,
+      "module_count": 30,
+      "name": "glom",
+      "path": "glom",
+      "source_root": ""
+    }
+  ],
+  "python_requires": "",
+  "python_version": "3.11",
+  "requirement_files": [
+    "requirements.txt",
+    "requirements.in"
+  ],
+  "root": "C:\\Users\\Aman.Kumar3\\Desktop\\R Systems Project\\POC\\Assignment\\.okfwork\\source",
+  "runtime_requirements": [
+    "boltons>=19.3.0",
+    "attrs",
+    "face>=20.1.1"
+  ],
+  "source_root": "",
+  "static_deps_resolved": true,
+  "system_packages": [],
+  "test_extras": [
+    "test"
+  ],
+  "test_framework": "pytest",
+  "test_paths": [
+    "glom/test"
+  ]
+}

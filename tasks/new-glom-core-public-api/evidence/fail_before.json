@@ -1,0 +1,25 @@
+{
+  "collected": 5,
+  "duration_s": 2.06,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 3,
+  "failing_tests": [
+    "tests_task.test_glom_core_public_api::test_covers_the_modules_own_public_api",
+    "tests_task.test_glom_core_public_api::test_declares_an_export_list",
+    "tests_task.test_glom_core_public_api::test_export_list_is_a_list_of_strings"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "tests_task.test_glom_core_public_api::test_covers_the_modules_own_public_api": "AssertionError: __all__ omits public names defined in glom.core: ['AUTO', 'Auto', 'BadSpec', 'Call', 'Coalesce', 'CoalesceError', 'FILL', 'Fill', 'GlomError', 'Glommer', 'Inspect', 'Invoke', 'Let', 'Path', 'PathAccessError', 'PathAssignError', 'Pipe', 'Ref', 'ScopeVars', 'Spec', 'TType', 'TargetRegistry', 'UnregisteredTarget', 'Val', 'Vars', 'arg_val', 'chain_child', 'format_invocation', 'format_oneline_trace', 'format_target_spec_trace', 'glom', 'register', 'register_op']\nassert not ['AUTO', 'Auto', 'BadSpec', 'Call', 'Coalesce', 'CoalesceError', ...]\ndef test_covers_the_modules_own_public_api():\n        module = _module()\n        exported = set(getattr(module, \"__all__\", []) or [])\n        missing = sorted(name for name in REQUIRED_NAMES if name not in exported)\n>       assert not missing, (\n            f\"__all__ omits public names defined in {MODULE_NAME}: {missing}\"\n        )\nE       AssertionError: __all__ omits public names defined in glom.core: ['AUTO', 'Auto', 'BadSpec', 'Call', 'Coalesce', 'CoalesceError', 'FILL', 'Fill', 'GlomError', 'Glommer', 'Inspect', 'Invoke', 'Let', 'Path', 'PathAccessError', 'PathAssignError', 'Pipe', 'Ref', 'ScopeVars', 'Spec', 'TType', 'TargetRegistry', 'UnregisteredTarget', 'Val', 'Vars', 'arg_val', 'chain_child', 'format_invocation', 'format_oneline_trace', 'format_target_spec_trace', 'glom', 'register', 'register_op']\nE       assert not ['AUTO', 'Auto', 'BadSpec', 'Call', 'Coalesce', 'CoalesceError', ...]\n\ntests_task/test_glom_core_publi",
+    "tests_task.test_glom_core_public_api::test_declares_an_export_list": "AssertionError: glom.core must declare __all__ to state its public API\nassert False\n +  where False = hasattr(<module 'glom.core' from '/tmp/tmp.rKAikTx66H/glom/core.py'>, '__all__')\ndef test_declares_an_export_list():\n        module = _module()\n>       assert hasattr(module, \"__all__\"), (\n            f\"{MODULE_NAME} must declare __all__ to state its public API\"\n        )\nE       AssertionError: glom.core must declare __all__ to state its public API\nE       assert False\nE        +  where False = hasattr(<module 'glom.core' from '/tmp/tmp.rKAikTx66H/glom/core.py'>, '__all__')\n\ntests_task/test_glom_core_public_api.py:56: AssertionError",
+    "tests_task.test_glom_core_public_api::test_export_list_is_a_list_of_strings": "AssertionError: __all__ must be a list\nassert False\n +  where False = isinstance(None, list)\ndef test_export_list_is_a_list_of_strings():\n        module = _module()\n        exported = getattr(module, \"__all__\", None)\n>       assert isinstance(exported, list), \"__all__ must be a list\"\nE       AssertionError: __all__ must be a list\nE       assert False\nE        +  where False = isinstance(None, list)\n\ntests_task/test_glom_core_public_api.py:64: AssertionError"
+  },
+  "fingerprint": "d13f2a64aac9ee835ccc4f80fe3424937f73bd37f73c68fe8b97241ff14e8a91",
+  "passed": 2,
+  "passing_tests": [
+    "tests_task.test_glom_core_public_api::test_every_exported_name_resolves",
+    "tests_task.test_glom_core_public_api::test_no_private_or_duplicate_names"
+  ],
+  "skipped": 0
+}

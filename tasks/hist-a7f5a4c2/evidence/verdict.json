@@ -1,0 +1,100 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "glom/test/test_basic.py::test_api_repr\nglom/test/test_mutation.py::test_assign\n\n2 tests collected in 0.45s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "6d1ab0b1ad52a433b806ed7de3ecd6344c36afc4b57136ef9121c0662e9815db",
+        "6d1ab0b1ad52a433b806ed7de3ecd6344c36afc4b57136ef9121c0662e9815db",
+        "6d1ab0b1ad52a433b806ed7de3ecd6344c36afc4b57136ef9121c0662e9815db"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "a01bfba39083d27c17ddf19ef32d45ba12bd9409442cac2371c8fde91871d553",
+        "a01bfba39083d27c17ddf19ef32d45ba12bd9409442cac2371c8fde91871d553",
+        "a01bfba39083d27c17ddf19ef32d45ba12bd9409442cac2371c8fde91871d553"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 2,
+        "duration_s": 1.92,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 2,
+        "failing_tests": [
+          "glom.test.test_basic::test_api_repr",
+          "glom.test.test_mutation::test_assign"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "6d1ab0b1ad52a433b806ed7de3ecd6344c36afc4b57136ef9121c0662e9815db",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 2,
+        "duration_s": 1.75,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "a01bfba39083d27c17ddf19ef32d45ba12bd9409442cac2371c8fde91871d553",
+        "passed": 2,
+        "passing_tests": [
+          "glom.test.test_basic::test_api_repr",
+          "glom.test.test_mutation::test_assign"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "hist-a7f5a4c2",
+  "valid": true
+}

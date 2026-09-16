@@ -1,0 +1,20 @@
+{
+  "collected": 2,
+  "duration_s": 1.66,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 2,
+  "failing_tests": [
+    "glom.test.test_flat::test_sum_integers",
+    "glom.test.test_flat::test_sum_seqs"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "glom.test.test_flat::test_sum_integers": "TypeError: Sum.__init__() got an unexpected keyword argument 'start'\ndef test_sum_integers():\n        target = list(range(5))\n    \n        assert glom(target, Sum()) == 10\n    \n>       assert glom(target, Sum(start=2)) == 12\n                            ^^^^^^^^^^^^\nE       TypeError: Sum.__init__() got an unexpected keyword argument 'start'\n\nglom/test/test_flat.py:9: TypeError",
+    "glom.test.test_flat::test_sum_seqs": "TypeError: Sum.__init__() got an unexpected keyword argument 'start'\ndef test_sum_seqs():\n        target = [(x,) for x in range(4)]\n>       assert glom(target, Sum(start=())) == (0, 1, 2, 3)\n                            ^^^^^^^^^^^^^\nE       TypeError: Sum.__init__() got an unexpected keyword argument 'start'\n\nglom/test/test_flat.py:24: TypeError"
+  },
+  "fingerprint": "e1f8c42fd9190679c726d5dead50df0c4959cfb1af546f0c7e5950d23616da84",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}

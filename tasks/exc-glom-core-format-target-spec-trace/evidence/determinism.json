@@ -1,0 +1,25 @@
+{
+  "input_exit_codes": [
+    1,
+    1,
+    1
+  ],
+  "input_fingerprints": [
+    "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d",
+    "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d",
+    "d1332f994808fa7d8961da6b4ff64369ceccde18a8fb9d1c567202a5f02b727d"
+  ],
+  "passed": true,
+  "repeats": 3,
+  "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+  "solution_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "solution_fingerprints": [
+    "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7",
+    "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7",
+    "c71755ee508aa97935c6d7803c4f9760c3556eef18260e843488dfc071d03ba7"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "glom/test/test_target_types.py::test_default_scope_register\nglom/test/test_target_types.py::test_faulty_iterate\n\n2 tests collected in 0.21s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "e474981e5ff4dc7d948ab741e40b3ee5065604127e1fe309266075cfe65233e3",
+        "e474981e5ff4dc7d948ab741e40b3ee5065604127e1fe309266075cfe65233e3",
+        "e474981e5ff4dc7d948ab741e40b3ee5065604127e1fe309266075cfe65233e3"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "7c284d0159f4f6e08eaa84967905245650e6046ffbb519106fff14c8290d23e8",
+        "7c284d0159f4f6e08eaa84967905245650e6046ffbb519106fff14c8290d23e8",
+        "7c284d0159f4f6e08eaa84967905245650e6046ffbb519106fff14c8290d23e8"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 2,
+        "duration_s": 1.52,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 2,
+        "failing_tests": [
+          "glom.test.test_target_types::test_default_scope_register",
+          "glom.test.test_target_types::test_faulty_iterate"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "e474981e5ff4dc7d948ab741e40b3ee5065604127e1fe309266075cfe65233e3",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 0,
+        "errors": 0,
+        "failed": 0,
+        "passed": 0
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 2,
+        "duration_s": 1.49,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "7c284d0159f4f6e08eaa84967905245650e6046ffbb519106fff14c8290d23e8",
+        "passed": 2,
+        "passing_tests": [
+          "glom.test.test_target_types::test_default_scope_register",
+          "glom.test.test_target_types::test_faulty_iterate"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "hist-fdafeea7",
+  "valid": true
+}

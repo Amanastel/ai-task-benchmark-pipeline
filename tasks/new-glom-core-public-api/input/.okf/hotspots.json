@@ -1,0 +1,210 @@
+[
+  {
+    "churn_commits": 272,
+    "coverage_percent": 98.44,
+    "file": "glom/core.py",
+    "risk_score": 188397.86,
+    "symbols": 175,
+    "total_complexity": 682
+  },
+  {
+    "churn_commits": 94,
+    "coverage_percent": 99.25,
+    "file": "glom/matching.py",
+    "risk_score": 31536.77,
+    "symbols": 91,
+    "total_complexity": 333
+  },
+  {
+    "churn_commits": 29,
+    "coverage_percent": 98.6,
+    "file": "glom/grouping.py",
+    "risk_score": 2264.26,
+    "symbols": 26,
+    "total_complexity": 77
+  },
+  {
+    "churn_commits": 27,
+    "coverage_percent": 100.0,
+    "file": "glom/streaming.py",
+    "risk_score": 1485.0,
+    "symbols": 23,
+    "total_complexity": 55
+  },
+  {
+    "churn_commits": 18,
+    "coverage_percent": 100.0,
+    "file": "glom/reduction.py",
+    "risk_score": 1278.0,
+    "symbols": 23,
+    "total_complexity": 71
+  },
+  {
+    "churn_commits": 15,
+    "coverage_percent": 98.58,
+    "file": "glom/mutation.py",
+    "risk_score": 1262.68,
+    "symbols": 18,
+    "total_complexity": 83
+  },
+  {
+    "churn_commits": 17,
+    "coverage_percent": 87.11,
+    "file": "glom/cli.py",
+    "risk_score": 1074.71,
+    "symbols": 9,
+    "total_complexity": 56
+  },
+  {
+    "churn_commits": 15,
+    "coverage_percent": 97.56,
+    "file": "glom/tutorial.py",
+    "risk_score": 138.29,
+    "symbols": 8,
+    "total_complexity": 9
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "glom/test/perf_report.py",
+    "risk_score": 0.0,
+    "symbols": 4,
+    "total_complexity": 7
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_basic.py",
+    "risk_score": 0.0,
+    "symbols": 6,
+    "total_complexity": 6
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 96.36,
+    "file": "glom/test/test_cli.py",
+    "risk_score": 0.0,
+    "symbols": 3,
+    "total_complexity": 5
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 97.0,
+    "file": "glom/test/test_error.py",
+    "risk_score": 0.0,
+    "symbols": 11,
+    "total_complexity": 29
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_match.py",
+    "risk_score": 0.0,
+    "symbols": 8,
+    "total_complexity": 10
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_mutation.py",
+    "risk_score": 0.0,
+    "symbols": 15,
+    "total_complexity": 17
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 99.55,
+    "file": "glom/test/test_path_and_t.py",
+    "risk_score": 0.0,
+    "symbols": 6,
+    "total_complexity": 6
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_reduction.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 1
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_scope_vars.py",
+    "risk_score": 0.0,
+    "symbols": 4,
+    "total_complexity": 4
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 92.16,
+    "file": "glom/test/test_snippets.py",
+    "risk_score": 0.0,
+    "symbols": 2,
+    "total_complexity": 7
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_streaming.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 1
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 100.0,
+    "file": "glom/test/test_target_types.py",
+    "risk_score": 0.0,
+    "symbols": 16,
+    "total_complexity": 18
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_core.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_grouping.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_matching.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_mutation.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_reduction.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  },
+  {
+    "churn_commits": 0,
+    "coverage_percent": 0.0,
+    "file": "tests_generated/test_doctests_glom_streaming.py",
+    "risk_score": 0.0,
+    "symbols": 1,
+    "total_complexity": 8
+  }
+]

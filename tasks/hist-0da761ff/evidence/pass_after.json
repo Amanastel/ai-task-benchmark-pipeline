@@ -1,0 +1,16 @@
+{
+  "collected": 2,
+  "duration_s": 1.66,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "274e8a2384f4c6041fe137ee038b0810ddca4efcd76e84bd9bca0ca2ca1fd0d0",
+  "passed": 2,
+  "passing_tests": [
+    "glom.test.test_reduction::test_merge",
+    "glom.test.test_reduction::test_merge_omd"
+  ],
+  "skipped": 0
+}

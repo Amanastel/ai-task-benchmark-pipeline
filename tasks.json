@@ -1,0 +1,452 @@
+{
+  "counts": {
+    "by_difficulty": {
+      "easy": 2,
+      "hard": 3,
+      "medium": 5
+    },
+    "by_source": {
+      "excision": 3,
+      "history": 5,
+      "net-new": 2
+    },
+    "delivered": 10,
+    "distinct_modules": 6
+  },
+  "determinism_repeats": 3,
+  "failures": [],
+  "generator": "okfpipe 1.0.0",
+  "modules": [
+    "glom.control_flow",
+    "glom.core",
+    "glom.flat",
+    "glom.grouping",
+    "glom.mutation",
+    "glom.reduction"
+  ],
+  "rejected_candidates": [
+    {
+      "id": "history-d81b0eb5ec",
+      "reason": "no test flips from red to green across the commit",
+      "source": "history",
+      "subject": "include test package, with all the tox-passing tests. fix py3 error with reversed() expecting a sequence."
+    },
+    {
+      "id": "history-e83f5e1414",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "add initial main, pop a couple todos"
+    },
+    {
+      "id": "history-b454244f70",
+      "reason": "verifier is not green on the commit tree (1 failed, 0 errors)",
+      "source": "history",
+      "subject": "a bunch of fixes to the extension api and error handling. merge in master. coverage ignore chainmap backport."
+    },
+    {
+      "id": "history-31f1903d3a",
+      "reason": "verifier is not green on the commit tree (1 failed, 0 errors)",
+      "source": "history",
+      "subject": "enhance glom CLI to support python-full specs (not just ast literals), as well as ast literal targets, fixes #34"
+    },
+    {
+      "id": "history-604f66967f",
+      "reason": "parent tree produces collection/import errors, not behavioural failures",
+      "source": "history",
+      "subject": "added basic bucketing use case for Group mode"
+    },
+    {
+      "id": "history-384c68e592",
+      "reason": "verifier is not green on the commit tree (1 failed, 0 errors)",
+      "source": "history",
+      "subject": "added more unit tests and fixed some small bugs"
+    },
+    {
+      "id": "history-6990dced34",
+      "reason": "no test flips from red to green across the commit",
+      "source": "history",
+      "subject": "cover pathaccess error assignment case"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-glom-core-glom",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-glom-core-targetregistry-get-handler",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-glom-core-argvaluator-mode",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "gates": {
+        "collects": false,
+        "determinism": true,
+        "fail_before": false,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": false
+      },
+      "id": "exc-glom-core-path-from-text",
+      "reason": "validation: failed gate(s): collects, fail_before, pass_after",
+      "source": "excision"
+    },
+    {
+      "id": "exc-glom.core.TargetRegistry.register_op",
+      "reason": "excision did not produce failing covering tests, or the stub broke the import",
+      "source": "excision"
+    }
+  ],
+  "rejected_count": 12,
+  "repo": {
+    "head_sha": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+    "name": "glom",
+    "remote": "https://github.com/mahmoud/glom.git"
+  },
+  "schema": "okf/1",
+  "tasks": [
+    {
+      "difficulty": "medium",
+      "evidence": "tasks/hist-0da761ff/evidence/",
+      "files_in_scope": [
+        "glom/reduction.py"
+      ],
+      "id": "hist-0da761ff",
+      "module": "glom.reduction",
+      "modules": [
+        "glom.reduction"
+      ],
+      "provenance": {
+        "commit_date": "2019-02-17T19:14:29-08:00",
+        "commit_sha": "0da761ffea3e9d85d65b4dcd4e4f2e40ecea947b",
+        "commit_subject": "change strategy on Merge() such that the initial value will not be operated on/updated to support the case of a lambda init",
+        "kind": "history",
+        "parent_sha": "08c801a37f7cd004631228eafebc940c9121701c",
+        "upstream_url": "https://github.com/mahmoud/glom/commit/0da761ffea3e9d85d65b4dcd4e4f2e40ecea947b"
+      },
+      "source_type": "history",
+      "title": "glom.reduction: Change strategy on Merge() such that the initial value will not be\u2026",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 2,
+      "verifier_command": "tasks/hist-0da761ff/verifier/run.sh input"
+    },
+    {
+      "difficulty": "medium",
+      "evidence": "tasks/hist-70c3d9cc/evidence/",
+      "files_in_scope": [
+        "glom/control_flow.py"
+      ],
+      "id": "hist-70c3d9cc",
+      "module": "glom.control_flow",
+      "modules": [
+        "glom.control_flow"
+      ],
+      "provenance": {
+        "commit_date": "2020-07-05T10:55:02-07:00",
+        "commit_sha": "70c3d9cc3f09bd0bd72ab96c5bbc78839b7fa6ea",
+        "commit_subject": "more tests, cleaner control flow in Switch.glomit",
+        "kind": "history",
+        "parent_sha": "b4215902bf02a9bd97ca68ac6d4fe9ff6b1ee81a",
+        "upstream_url": "https://github.com/mahmoud/glom/commit/70c3d9cc3f09bd0bd72ab96c5bbc78839b7fa6ea"
+      },
+      "source_type": "history",
+      "title": "glom.control_flow: Cleaner control flow in Switch.glomit",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 1,
+      "verifier_command": "tasks/hist-70c3d9cc/verifier/run.sh input"
+    },
+    {
+      "difficulty": "medium",
+      "evidence": "tasks/hist-93c33eb8/evidence/",
+      "files_in_scope": [
+        "glom/flat.py"
+      ],
+      "id": "hist-93c33eb8",
+      "module": "glom.flat",
+      "modules": [
+        "glom.flat"
+      ],
+      "provenance": {
+        "commit_date": "2019-01-16T19:02:38-08:00",
+        "commit_sha": "93c33eb8db268e4cd2a355664c2c52de427ed517",
+        "commit_subject": "Sum() pretty much ready to go",
+        "kind": "history",
+        "parent_sha": "83020ca243245c9b939ad6a85e94a837417ff612",
+        "upstream_url": "https://github.com/mahmoud/glom/commit/93c33eb8db268e4cd2a355664c2c52de427ed517"
+      },
+      "source_type": "history",
+      "title": "glom.flat: Sum() pretty much ready to go",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 2,
+      "verifier_command": "tasks/hist-93c33eb8/verifier/run.sh input"
+    },
+    {
+      "difficulty": "easy",
+      "evidence": "tasks/hist-a7f5a4c2/evidence/",
+      "files_in_scope": [
+        "glom/mutation.py"
+      ],
+      "id": "hist-a7f5a4c2",
+      "module": "glom.mutation",
+      "modules": [
+        "glom.mutation"
+      ],
+      "provenance": {
+        "commit_date": "2019-10-28T23:07:16-07:00",
+        "commit_sha": "a7f5a4c2fefe2aee31a8ce9c893118f7b1d5f7a2",
+        "commit_subject": "Assign.__repr__",
+        "kind": "history",
+        "parent_sha": "ec360f496f2c25d4e2ee58b9451651dec3bf47a4",
+        "upstream_url": "https://github.com/mahmoud/glom/commit/a7f5a4c2fefe2aee31a8ce9c893118f7b1d5f7a2"
+      },
+      "source_type": "history",
+      "title": "glom.mutation: Assign.__repr__",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 2,
+      "verifier_command": "tasks/hist-a7f5a4c2/verifier/run.sh input"
+    },
+    {
+      "difficulty": "medium",
+      "evidence": "tasks/hist-fdafeea7/evidence/",
+      "files_in_scope": [
+        "glom/core.py"
+      ],
+      "id": "hist-fdafeea7",
+      "module": "glom.core",
+      "modules": [
+        "glom.core"
+      ],
+      "provenance": {
+        "commit_date": "2018-07-01T22:39:27-07:00",
+        "commit_sha": "fdafeea746ba9f6a5e51a4801a4d3f5f85718fd8",
+        "commit_subject": "fix a Path repr issue, add a bit more coverage",
+        "kind": "history",
+        "parent_sha": "b454244f70708dee8ee2483998859c9882fc2891",
+        "upstream_url": "https://github.com/mahmoud/glom/commit/fdafeea746ba9f6a5e51a4801a4d3f5f85718fd8"
+      },
+      "source_type": "history",
+      "title": "glom.core: Fix a Path repr issue, add a bit more coverage",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 2,
+      "verifier_command": "tasks/hist-fdafeea7/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/exc-glom-core-format-invocation/evidence/",
+      "files_in_scope": [
+        "glom/core.py"
+      ],
+      "id": "exc-glom-core-format-invocation",
+      "module": "glom.core",
+      "modules": [
+        "glom.core"
+      ],
+      "provenance": {
+        "detector": "glom/core.py:582",
+        "excision_target": "glom.core.format_invocation",
+        "kind": "excision"
+      },
+      "source_type": "excision",
+      "title": "Implement glom.core.format_invocation",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 26,
+      "verifier_command": "tasks/exc-glom-core-format-invocation/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/exc-glom-core-format-target-spec-trace/evidence/",
+      "files_in_scope": [
+        "glom/core.py"
+      ],
+      "id": "exc-glom-core-format-target-spec-trace",
+      "module": "glom.core",
+      "modules": [
+        "glom.core"
+      ],
+      "provenance": {
+        "detector": "glom/core.py:243",
+        "excision_target": "glom.core.format_target_spec_trace",
+        "kind": "excision"
+      },
+      "source_type": "excision",
+      "title": "Implement glom.core.format_target_spec_trace",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 28,
+      "verifier_command": "tasks/exc-glom-core-format-target-spec-trace/verifier/run.sh input"
+    },
+    {
+      "difficulty": "hard",
+      "evidence": "tasks/exc-glom-grouping-group/evidence/",
+      "files_in_scope": [
+        "glom/grouping.py"
+      ],
+      "id": "exc-glom-grouping-group",
+      "module": "glom.grouping",
+      "modules": [
+        "glom.grouping"
+      ],
+      "provenance": {
+        "detector": "glom/grouping.py:100",
+        "excision_target": "glom.grouping.GROUP",
+        "kind": "excision"
+      },
+      "source_type": "excision",
+      "title": "Implement glom.grouping.GROUP",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 12,
+      "verifier_command": "tasks/exc-glom-grouping-group/verifier/run.sh input"
+    },
+    {
+      "difficulty": "easy",
+      "evidence": "tasks/new-glom-core-public-api/evidence/",
+      "files_in_scope": [
+        "glom/core.py"
+      ],
+      "id": "new-glom-core-public-api",
+      "module": "glom.core",
+      "modules": [
+        "glom.core"
+      ],
+      "provenance": {
+        "detector": "missing_dunder_all",
+        "kind": "net-new"
+      },
+      "source_type": "net-new",
+      "title": "Declare the public API of glom.core",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 5,
+      "verifier_command": "tasks/new-glom-core-public-api/verifier/run.sh input"
+    },
+    {
+      "difficulty": "medium",
+      "evidence": "tasks/new-path-hashable/evidence/",
+      "files_in_scope": [
+        "glom/core.py"
+      ],
+      "id": "new-path-hashable",
+      "module": "glom.core",
+      "modules": [
+        "glom.core"
+      ],
+      "provenance": {
+        "detector": "eq_without_hash",
+        "excision_target": "glom.core.Path",
+        "kind": "net-new"
+      },
+      "source_type": "net-new",
+      "title": "Make Path hashable, consistently with its equality",
+      "validation_gates": {
+        "collects": true,
+        "determinism": true,
+        "fail_before": true,
+        "imports": true,
+        "no_collateral": true,
+        "pass_after": true
+      },
+      "validation_status": "validated",
+      "verifier_cases": 6,
+      "verifier_command": "tasks/new-path-hashable/verifier/run.sh input"
+    }
+  ],
+  "verifier_runner": "tasks/<id>/verifier/run.sh <input|solution>"
+}

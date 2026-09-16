@@ -1,0 +1,29 @@
+{
+  "difficulty": "easy",
+  "difficulty_rationale": "Mechanically simple and the requirement is fully stated, but it is not free: the agent has to distinguish names the module defines from names it merely imports, which is the one place a careless answer goes wrong.",
+  "files_in_scope": [
+    "glom/core.py"
+  ],
+  "id": "new-glom-core-public-api",
+  "instruction": "The module `glom.core` exposes a substantial public API but never declares it. Without an explicit export list, `from glom.core import *` pulls in every non-underscore name including incidental imports, and tooling has no way to tell the supported surface from internals.\n\nDeclare the module's public API explicitly. The declaration must:\n\n  - exist as a module-level list of strings;\n  - name only objects the module actually provides;\n  - contain no private names (nothing beginning with an underscore);\n  - contain no duplicates;\n  - include every public class and function the module itself defines.\n\nScope: `glom/core.py`. Do not rename, move or delete anything -- this is an additive declaration of what is already there.\n",
+  "modules": [
+    "glom.core"
+  ],
+  "notes": [],
+  "provenance": {
+    "detector": "missing_dunder_all",
+    "kind": "net-new"
+  },
+  "title": "Declare the public API of glom.core",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "tests_task/test_glom_core_public_api.py::test_declares_an_export_list",
+      "tests_task/test_glom_core_public_api.py::test_export_list_is_a_list_of_strings",
+      "tests_task/test_glom_core_public_api.py::test_every_exported_name_resolves",
+      "tests_task/test_glom_core_public_api.py::test_no_private_or_duplicate_names",
+      "tests_task/test_glom_core_public_api.py::test_covers_the_modules_own_public_api"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "glom/test/test_error.py::test_all_public_errors\nglom/test/test_grouping.py::test_agg\nglom/test/test_grouping.py::test_bucketing\nglom/test/test_grouping.py::test_corner_cases\nglom/test/test_grouping.py::test_limit\nglom/test/test_grouping.py::test_sample\ntests_generated/test_doctests_glom_grouping.py::test_doctest_Avg\ntests_generated/test_doctests_glom_grouping.py::test_doctest_First\ntests_generated/test_doctests_glom_grouping.py::test_doctest_Group\ntests_generated/test_doctests_glom_grouping.py::test_doctest_Limit\ntests_generated/test_doctests_glom_grouping.py::test_doctest_Max\ntests_generated/test_doctests_glom_grouping.py::test_doctest_Min\n\n12 tests collected in 0.53s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "043a16fc91e21f769709118a71f30513bd1138b07cc0bda5714ff074fa1b24a7",
+        "043a16fc91e21f769709118a71f30513bd1138b07cc0bda5714ff074fa1b24a7",
+        "043a16fc91e21f769709118a71f30513bd1138b07cc0bda5714ff074fa1b24a7"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "de8c648db26ae23ff5550d079c013397edba7e023f74f67c4f11234e69d3e202",
+        "de8c648db26ae23ff5550d079c013397edba7e023f74f67c4f11234e69d3e202",
+        "de8c648db26ae23ff5550d079c013397edba7e023f74f67c4f11234e69d3e202"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 12,
+        "duration_s": 2.3,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 12,
+        "failing_tests": [
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_grouping::test_agg",
+          "glom.test.test_grouping::test_bucketing",
+          "glom.test.test_grouping::test_corner_cases",
+          "glom.test.test_grouping::test_limit",
+          "glom.test.test_grouping::test_sample",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Avg",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_First",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Group",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Limit",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Max",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Min"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "043a16fc91e21f769709118a71f30513bd1138b07cc0bda5714ff074fa1b24a7",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 12,
+        "passed": 256
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 12,
+        "duration_s": 2.09,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "de8c648db26ae23ff5550d079c013397edba7e023f74f67c4f11234e69d3e202",
+        "passed": 12,
+        "passing_tests": [
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_grouping::test_agg",
+          "glom.test.test_grouping::test_bucketing",
+          "glom.test.test_grouping::test_corner_cases",
+          "glom.test.test_grouping::test_limit",
+          "glom.test.test_grouping::test_sample",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Avg",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_First",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Group",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Limit",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Max",
+          "tests_generated.test_doctests_glom_grouping::test_doctest_Min"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "exc-glom-grouping-group",
+  "valid": true
+}

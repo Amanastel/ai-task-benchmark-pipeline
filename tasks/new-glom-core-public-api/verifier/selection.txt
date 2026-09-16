@@ -1,0 +1,5 @@
+tests_task/test_glom_core_public_api.py::test_declares_an_export_list
+tests_task/test_glom_core_public_api.py::test_export_list_is_a_list_of_strings
+tests_task/test_glom_core_public_api.py::test_every_exported_name_resolves
+tests_task/test_glom_core_public_api.py::test_no_private_or_duplicate_names
+tests_task/test_glom_core_public_api.py::test_covers_the_modules_own_public_api

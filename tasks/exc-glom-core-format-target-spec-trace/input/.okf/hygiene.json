@@ -1,0 +1,116 @@
+{
+  "base_image": "python@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534",
+  "container": {
+    "image": "okf-glom:latest",
+    "notes": [
+      "no backing services detected; the test container runs with no network"
+    ],
+    "services": [],
+    "test_command": "python -m pytest \"$@\" $PATHS -p no:cacheprovider --timeout=300 -q"
+  },
+  "deterministic": true,
+  "failures": [],
+  "image_tag": "okf-glom:latest",
+  "lint": {
+    "baselined_rules": {},
+    "config": "ruff.toml",
+    "fell_back": false,
+    "fixed": 66,
+    "formatted_files": 26,
+    "mode": "fix+format",
+    "notes": [],
+    "ok": false,
+    "remaining": 0
+  },
+  "notes": [
+    "4 test line(s) use clock/random/network APIs that can make a verdict wobble; reported, not rewritten",
+    "nondeterminism scan: 4 flagged line(s)"
+  ],
+  "ok": true,
+  "pin": {
+    "extras": [
+      "test"
+    ],
+    "hashed": true,
+    "lock": "requirements.lock",
+    "notes": [],
+    "ok": true,
+    "packages": 14,
+    "resolved": {
+      "attrs": "26.1.0",
+      "boltons": "26.2.0",
+      "coverage": "7.16.1",
+      "face": "26.0.1",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pygments": "2.21.0",
+      "pytest": "9.1.1",
+      "pytest-timeout": "2.4.0",
+      "pyyaml": "6.0.3",
+      "ruff": "0.16.7",
+      "setuptools": "84.0.0",
+      "wheel": "0.48.0"
+    },
+    "runtime_lock": "requirements-runtime.lock",
+    "source": "setup.py"
+  },
+  "runs": [
+    {
+      "duration_s": 3.21,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "743c4344dc5a488a6c580cc31e3fc6c5b252f1a12cf8b7a737f5d080b8e5a011",
+      "label": "baseline",
+      "passed": 202,
+      "skipped": 0,
+      "total": 202
+    },
+    {
+      "duration_s": 3.34,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "0d1f3c033362753bed74a6b0724c6e7802284404528942f9d6040254220dae0b",
+      "label": "final-1",
+      "passed": 268,
+      "skipped": 0,
+      "total": 268
+    },
+    {
+      "duration_s": 3.54,
+      "errors": 0,
+      "exit_code": 0,
+      "failed": 0,
+      "fingerprint": "0d1f3c033362753bed74a6b0724c6e7802284404528942f9d6040254220dae0b",
+      "label": "final-2",
+      "passed": 268,
+      "skipped": 0,
+      "total": 268
+    }
+  ],
+  "tests": {
+    "cases": 66,
+    "doctest_cases": 65,
+    "dropped": 38,
+    "exception_cases": 2,
+    "files": [
+      "tests_generated/test_behaviour_glom_cli.py",
+      "tests_generated/test_behaviour_glom_core.py",
+      "tests_generated/test_doctests_glom_core.py",
+      "tests_generated/test_doctests_glom_grouping.py",
+      "tests_generated/test_doctests_glom_matching.py",
+      "tests_generated/test_doctests_glom_mutation.py",
+      "tests_generated/test_doctests_glom_reduction.py",
+      "tests_generated/test_doctests_glom_streaming.py"
+    ],
+    "notes": [
+      "65 doctest case(s) materialised from existing docstrings",
+      "6 value and 2 exception characterisation case(s) probed in-container",
+      "38 candidate(s) dropped as non-deterministic, unreprable or failing"
+    ],
+    "ok": true,
+    "value_cases": 6
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "difficulty": "easy",
+  "difficulty_rationale": "A localised change of 11 lines in one file with 2 behaviour(s) to satisfy. The failing case points almost directly at the responsible branch, so the difficulty is reading comprehension rather than design.",
+  "files_in_scope": [
+    "glom/mutation.py"
+  ],
+  "id": "hist-a7f5a4c2",
+  "instruction": "This repository has an incomplete behaviour in `glom.mutation`.\n\nSummary of the problem, as reported: Assign.__repr__.\n\nRunning the graded checks against this tree currently produces 2 failure(s):\n\n  - **api repr** - observed: `AssertionError: assert {'Assign', 'C...', 'Coalesce'} == {'Check', 'Coalesce'}`\n  - **assign** - observed: `AssertionError: assert '<glom.mutati...<addr>>' == 'Assign(T.a, 1)'`\n\nChange the implementation so that these behaviours hold. Work out the intended semantics from the surrounding code and from how the affected functions are used elsewhere in the package.\n\nScope: the change belongs in `glom/mutation.py`. You may read anything in the repository, but the graded test files are replaced with a reference copy before grading, so editing them has no effect.\n\nSuccess is measured only by observable behaviour: any implementation that makes the failing cases pass, without breaking any test that currently passes, is accepted. No particular structure, helper name or code shape is required.\n",
+  "modules": [
+    "glom.mutation"
+  ],
+  "notes": [],
+  "provenance": {
+    "commit_date": "2019-10-28T23:07:16-07:00",
+    "commit_sha": "a7f5a4c2fefe2aee31a8ce9c893118f7b1d5f7a2",
+    "commit_subject": "Assign.__repr__",
+    "kind": "history",
+    "parent_sha": "ec360f496f2c25d4e2ee58b9451651dec3bf47a4",
+    "upstream_url": "https://github.com/mahmoud/glom/commit/a7f5a4c2fefe2aee31a8ce9c893118f7b1d5f7a2"
+  },
+  "title": "glom.mutation: Assign.__repr__",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_basic.py::test_api_repr",
+      "glom/test/test_mutation.py::test_assign"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "difficulty": "medium",
+  "difficulty_rationale": "A single-module change of 37 lines constrained by 2 distinct behaviours. The contract is discoverable from the surrounding code, but the agent must infer which of several plausible readings the tests encode rather than guessing from the symptom alone.",
+  "files_in_scope": [
+    "glom/reduction.py"
+  ],
+  "id": "hist-0da761ff",
+  "instruction": "This repository has an incomplete behaviour in `glom.reduction`.\n\nSummary of the problem, as reported: change strategy on Merge() such that the initial value will not be operated on/updated to support the case of a lambda init.\n\nRunning the graded checks against this tree currently produces 2 failure(s):\n\n  - **merge** - observed: `TypeError: expected \"op\" to be callable, not 'update_extend'`\n  - **merge omd** - observed: `TypeError: expected \"op\" to be callable, not 'update_extend'`\n\nChange the implementation so that these behaviours hold. Work out the intended semantics from the surrounding code and from how the affected functions are used elsewhere in the package.\n\nScope: the change belongs in `glom/reduction.py`. You may read anything in the repository, but the graded test files are replaced with a reference copy before grading, so editing them has no effect.\n\nSuccess is measured only by observable behaviour: any implementation that makes the failing cases pass, without breaking any test that currently passes, is accepted. No particular structure, helper name or code shape is required.\n",
+  "modules": [
+    "glom.reduction"
+  ],
+  "notes": [],
+  "provenance": {
+    "commit_date": "2019-02-17T19:14:29-08:00",
+    "commit_sha": "0da761ffea3e9d85d65b4dcd4e4f2e40ecea947b",
+    "commit_subject": "change strategy on Merge() such that the initial value will not be operated on/updated to support the case of a lambda init",
+    "kind": "history",
+    "parent_sha": "08c801a37f7cd004631228eafebc940c9121701c",
+    "upstream_url": "https://github.com/mahmoud/glom/commit/0da761ffea3e9d85d65b4dcd4e4f2e40ecea947b"
+  },
+  "title": "glom.reduction: Change strategy on Merge() such that the initial value will not be\u2026",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_reduction.py::test_merge",
+      "glom/test/test_reduction.py::test_merge_omd"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

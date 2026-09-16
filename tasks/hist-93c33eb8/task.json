@@ -1,0 +1,30 @@
+{
+  "difficulty": "medium",
+  "difficulty_rationale": "A single-module change of 59 lines constrained by 2 distinct behaviours. The contract is discoverable from the surrounding code, but the agent must infer which of several plausible readings the tests encode rather than guessing from the symptom alone.",
+  "files_in_scope": [
+    "glom/flat.py"
+  ],
+  "id": "hist-93c33eb8",
+  "instruction": "This repository has an incomplete behaviour in `glom.flat`.\n\nSummary of the problem, as reported: Sum() pretty much ready to go.\n\nRunning the graded checks against this tree currently produces 2 failure(s):\n\n  - **sum integers** - observed: `TypeError: Sum.__init__() got an unexpected keyword argument 'start'`\n  - **sum seqs** - observed: `TypeError: Sum.__init__() got an unexpected keyword argument 'start'`\n\nChange the implementation so that these behaviours hold. Work out the intended semantics from the surrounding code and from how the affected functions are used elsewhere in the package.\n\nScope: the change belongs in `glom/flat.py`. You may read anything in the repository, but the graded test files are replaced with a reference copy before grading, so editing them has no effect.\n\nSuccess is measured only by observable behaviour: any implementation that makes the failing cases pass, without breaking any test that currently passes, is accepted. No particular structure, helper name or code shape is required.\n",
+  "modules": [
+    "glom.flat"
+  ],
+  "notes": [],
+  "provenance": {
+    "commit_date": "2019-01-16T19:02:38-08:00",
+    "commit_sha": "93c33eb8db268e4cd2a355664c2c52de427ed517",
+    "commit_subject": "Sum() pretty much ready to go",
+    "kind": "history",
+    "parent_sha": "83020ca243245c9b939ad6a85e94a837417ff612",
+    "upstream_url": "https://github.com/mahmoud/glom/commit/93c33eb8db268e4cd2a355664c2c52de427ed517"
+  },
+  "title": "glom.flat: Sum() pretty much ready to go",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "glom/test/test_flat.py::test_sum_integers",
+      "glom/test/test_flat.py::test_sum_seqs"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

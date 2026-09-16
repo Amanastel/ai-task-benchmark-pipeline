@@ -1,0 +1,2 @@
+glom/test/test_basic.py::test_api_repr
+glom/test/test_mutation.py::test_assign

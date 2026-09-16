@@ -1,0 +1,20 @@
+{
+  "collected": 6,
+  "duration_s": 1.85,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "1850c482ccae7c845b7286ccb89d27696a0cebb560a54bcc23abdd659cafd8bd",
+  "passed": 6,
+  "passing_tests": [
+    "tests_task.test_glom_core_path_hashable::test_equal_instances_hash_equally",
+    "tests_task.test_glom_core_path_hashable::test_hash_is_stable_across_calls",
+    "tests_task.test_glom_core_path_hashable::test_instances_are_hashable",
+    "tests_task.test_glom_core_path_hashable::test_set_deduplicates_equal_instances",
+    "tests_task.test_glom_core_path_hashable::test_unequal_instances_remain_distinct",
+    "tests_task.test_glom_core_path_hashable::test_usable_as_dict_key"
+  ],
+  "skipped": 0
+}

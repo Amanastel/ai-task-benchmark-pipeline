@@ -1,0 +1,2 @@
+glom/test/test_target_types.py::test_default_scope_register
+glom/test/test_target_types.py::test_faulty_iterate

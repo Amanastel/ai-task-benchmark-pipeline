@@ -1,0 +1,96 @@
+{
+  "counts": {
+    "claims": 1411,
+    "commits": 1050,
+    "edges": 3759,
+    "modules": 37,
+    "symbols": 704
+  },
+  "files": {
+    "claims": "claims.jsonl",
+    "coverage": "coverage.json",
+    "edges": "edges.jsonl",
+    "graph": "../repo_graph.json",
+    "history": "history.jsonl",
+    "hotspots": "hotspots.json",
+    "modules": "modules.jsonl",
+    "symbols": "symbols.jsonl"
+  },
+  "generator": "okfpipe 1.0.0",
+  "repo": {
+    "branch": "master",
+    "head_sha": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+    "name": "glom",
+    "packages": [
+      "glom"
+    ],
+    "python_version": "3.11",
+    "remote": "https://github.com/mahmoud/glom.git"
+  },
+  "schema": "okf/1",
+  "unresolved_call_targets": {
+    "''.join": 12,
+    "', '.join": 9,
+    "'\\n'.join": 3,
+    "Foo": 6,
+    "_test_exc": 10,
+    "args.append": 4,
+    "bad": 4,
+    "cmd.add": 8,
+    "default_if_none": 4,
+    "errs.append": 5,
+    "finder.find": 6,
+    "fmt": 5,
+    "func": 5,
+    "glommer.glom": 14,
+    "glommer.register": 10,
+    "good": 4,
+    "iterate": 4,
+    "kw.pop": 6,
+    "kwargs.keys": 5,
+    "kwargs.pop": 29,
+    "mk_fmt": 3,
+    "object_name.split": 6,
+    "prepr.append": 7,
+    "r": 11,
+    "recur": 4,
+    "recurse": 13,
+    "runner.run": 6,
+    "scope.get": 4,
+    "scope.update": 6,
+    "scope[TargetRegistry].get_handler": 6,
+    "scope[glom]": 45,
+    "segments.append": 13,
+    "self._add_op": 11,
+    "self.init": 4,
+    "self.register": 9,
+    "spec": 4,
+    "spec.items": 4,
+    "treg.get_handler": 5,
+    "treg.register": 7,
+    "treg.register_op": 7
+  },
+  "verification": {
+    "claims": {
+      "checked": 1411,
+      "rate": 1.0,
+      "verified": 1411
+    },
+    "edges": {
+      "checked": 3759,
+      "failure_count": 2,
+      "failures": [
+        {
+          "edge": "calls:symbol:glom.test.test_basic.test_invoke->symbol:glom.Invoke(test).star(args='args').constants(3, b='b').specs@glom/test/test_basic.py:266",
+          "reason": "token 'specs' not near glom/test/test_basic.py:266"
+        },
+        {
+          "edge": "calls:symbol:glom.test.test_basic.test_invoke->symbol:glom.Invoke.specfunc(T).star(args='args').constants(3, b='b').specs@glom/test/test_basic.py:284",
+          "reason": "token 'specs' not near glom/test/test_basic.py:284"
+        }
+      ],
+      "rate": 0.9995,
+      "verified": 3757
+    }
+  }
+}

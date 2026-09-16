@@ -1,0 +1,16 @@
+{
+  "collected": 2,
+  "duration_s": 1.69,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "6006e261250d5d32a9ec20be5e035d1dba323e74e3bb4df59001e76f048e52d4",
+  "passed": 2,
+  "passing_tests": [
+    "glom.test.test_flat::test_sum_integers",
+    "glom.test.test_flat::test_sum_seqs"
+  ],
+  "skipped": 0
+}

@@ -1,0 +1,26 @@
+{
+  "collected": 12,
+  "duration_s": 2.09,
+  "errors": 0,
+  "exit_code": 0,
+  "failed": 0,
+  "failing_tests": [],
+  "failure_kind": "none",
+  "fingerprint": "de8c648db26ae23ff5550d079c013397edba7e023f74f67c4f11234e69d3e202",
+  "passed": 12,
+  "passing_tests": [
+    "glom.test.test_error::test_all_public_errors",
+    "glom.test.test_grouping::test_agg",
+    "glom.test.test_grouping::test_bucketing",
+    "glom.test.test_grouping::test_corner_cases",
+    "glom.test.test_grouping::test_limit",
+    "glom.test.test_grouping::test_sample",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_Avg",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_First",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_Group",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_Limit",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_Max",
+    "tests_generated.test_doctests_glom_grouping::test_doctest_Min"
+  ],
+  "skipped": 0
+}

@@ -1,0 +1,28 @@
+# Pipeline scratch space. Intermediates, container logs and per-candidate
+# probe trees live here; regenerated on every run.
+.okfwork/
+heldout/.okfwork/
+
+# Raw run logs (the durable summaries live in output/run-summary.json and
+# output/<repo>/.okf/, which ARE committed).
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

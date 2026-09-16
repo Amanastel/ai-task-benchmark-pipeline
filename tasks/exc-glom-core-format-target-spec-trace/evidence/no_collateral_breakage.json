@@ -1,0 +1,18 @@
+{
+  "input_suite": {
+    "collected": 268,
+    "errors": 0,
+    "failed": 28,
+    "passed": 240
+  },
+  "passed": true,
+  "regressed_count": 0,
+  "regressed_tests": [],
+  "requirement": "no test passing on input/ may fail on solution/",
+  "solution_suite": {
+    "collected": 268,
+    "errors": 0,
+    "failed": 0,
+    "passed": 268
+  }
+}

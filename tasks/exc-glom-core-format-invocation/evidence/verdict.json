@@ -1,0 +1,148 @@
+{
+  "determinism_repeats": 3,
+  "gates": {
+    "collects": {
+      "detail": "om/test/test_reduction.py::test_flatten\nglom/test/test_reduction.py::test_fold\nglom/test/test_reduction.py::test_sum_integers\nglom/test/test_scope_vars.py::test_let\nglom/test/test_scope_vars.py::test_s_scope_assign\nglom/test/test_scope_vars.py::test_vars\nglom/test/test_streaming.py::test_all\nglom/test/test_streaming.py::test_faulty_iterate\nglom/test/test_streaming.py::test_filter\nglom/test/test_streaming.py::test_first\nglom/test/test_streaming.py::test_map\nglom/test/test_streaming.py::test_slice\nglom/test/test_streaming.py::test_split_flatten\nglom/test/test_streaming.py::test_unique\nglom/test/test_streaming.py::test_windowed\ntests_generated/test_doctests_glom_core.py::test_doctest_TType\ntests_generated/test_doctests_glom_core.py::test_doctest_format_invocation\n\n26 tests collected in 0.86s\n",
+      "passed": true
+    },
+    "determinism": {
+      "input_exit_codes": [
+        1,
+        1,
+        1
+      ],
+      "input_fingerprints": [
+        "550e1c9c480b9e2f7add9ff5a03d3cc20eaeccc8e8e74e2911f48c22788656b7",
+        "550e1c9c480b9e2f7add9ff5a03d3cc20eaeccc8e8e74e2911f48c22788656b7",
+        "550e1c9c480b9e2f7add9ff5a03d3cc20eaeccc8e8e74e2911f48c22788656b7"
+      ],
+      "passed": true,
+      "repeats": 3,
+      "requirement": "identical per-test outcome fingerprints across repeats, not merely identical exit codes",
+      "solution_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "solution_fingerprints": [
+        "448d2889811f8137eb515060d8cade2b2bff3b0b0b4214ca453a6a41053edf04",
+        "448d2889811f8137eb515060d8cade2b2bff3b0b0b4214ca453a6a41053edf04",
+        "448d2889811f8137eb515060d8cade2b2bff3b0b0b4214ca453a6a41053edf04"
+      ]
+    },
+    "fail_before": {
+      "failure_kind": "behavioural",
+      "passed": true,
+      "requirement": "verifier must fail against input/ with a behavioural assertion, not an import or collection error",
+      "run": {
+        "collected": 26,
+        "duration_s": 2.93,
+        "errors": 0,
+        "exit_code": 1,
+        "failed": 26,
+        "failing_tests": [
+          "glom.test.test_basic::test_coalesce",
+          "glom.test.test_basic::test_invoke",
+          "glom.test.test_check::test_check_basic",
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_error::test_coalesce_stack",
+          "glom.test.test_grouping::test_agg",
+          "glom.test.test_path_and_t::test_path_access_error_message",
+          "glom.test.test_path_and_t::test_path_t_roundtrip",
+          "glom.test.test_path_and_t::test_t_picklability",
+          "glom.test.test_reduction::test_flatten",
+          "glom.test.test_reduction::test_fold",
+          "glom.test.test_reduction::test_sum_integers",
+          "glom.test.test_scope_vars::test_let",
+          "glom.test.test_scope_vars::test_s_scope_assign",
+          "glom.test.test_scope_vars::test_vars",
+          "glom.test.test_streaming::test_all",
+          "glom.test.test_streaming::test_faulty_iterate",
+          "glom.test.test_streaming::test_filter",
+          "glom.test.test_streaming::test_first",
+          "glom.test.test_streaming::test_map",
+          "glom.test.test_streaming::test_slice",
+          "glom.test.test_streaming::test_split_flatten",
+          "glom.test.test_streaming::test_unique",
+          "glom.test.test_streaming::test_windowed",
+          "tests_generated.test_doctests_glom_core::test_doctest_TType",
+          "tests_generated.test_doctests_glom_core::test_doctest_format_invocation"
+        ],
+        "failure_kind": "behavioural",
+        "fingerprint": "550e1c9c480b9e2f7add9ff5a03d3cc20eaeccc8e8e74e2911f48c22788656b7",
+        "passed": 0,
+        "passing_tests": [],
+        "skipped": 0
+      }
+    },
+    "imports": {
+      "detail": "",
+      "passed": true
+    },
+    "no_collateral": {
+      "input_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 26,
+        "passed": 242
+      },
+      "passed": true,
+      "regressed_count": 0,
+      "regressed_tests": [],
+      "requirement": "no test passing on input/ may fail on solution/",
+      "solution_suite": {
+        "collected": 268,
+        "errors": 0,
+        "failed": 0,
+        "passed": 268
+      }
+    },
+    "pass_after": {
+      "passed": true,
+      "requirement": "verifier must pass cleanly against solution/",
+      "run": {
+        "collected": 26,
+        "duration_s": 2.23,
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "failing_tests": [],
+        "failure_kind": "none",
+        "fingerprint": "448d2889811f8137eb515060d8cade2b2bff3b0b0b4214ca453a6a41053edf04",
+        "passed": 26,
+        "passing_tests": [
+          "glom.test.test_basic::test_coalesce",
+          "glom.test.test_basic::test_invoke",
+          "glom.test.test_check::test_check_basic",
+          "glom.test.test_error::test_all_public_errors",
+          "glom.test.test_error::test_coalesce_stack",
+          "glom.test.test_grouping::test_agg",
+          "glom.test.test_path_and_t::test_path_access_error_message",
+          "glom.test.test_path_and_t::test_path_t_roundtrip",
+          "glom.test.test_path_and_t::test_t_picklability",
+          "glom.test.test_reduction::test_flatten",
+          "glom.test.test_reduction::test_fold",
+          "glom.test.test_reduction::test_sum_integers",
+          "glom.test.test_scope_vars::test_let",
+          "glom.test.test_scope_vars::test_s_scope_assign",
+          "glom.test.test_scope_vars::test_vars",
+          "glom.test.test_streaming::test_all",
+          "glom.test.test_streaming::test_faulty_iterate",
+          "glom.test.test_streaming::test_filter",
+          "glom.test.test_streaming::test_first",
+          "glom.test.test_streaming::test_map",
+          "glom.test.test_streaming::test_slice",
+          "glom.test.test_streaming::test_split_flatten",
+          "glom.test.test_streaming::test_unique",
+          "glom.test.test_streaming::test_windowed",
+          "tests_generated.test_doctests_glom_core::test_doctest_TType",
+          "tests_generated.test_doctests_glom_core::test_doctest_format_invocation"
+        ],
+        "skipped": 0
+      }
+    }
+  },
+  "notes": [],
+  "task_id": "exc-glom-core-format-invocation",
+  "valid": true
+}

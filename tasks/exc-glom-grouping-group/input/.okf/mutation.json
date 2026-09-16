@@ -1,0 +1,95 @@
+{
+  "discarded_unparsable": 0,
+  "killed": 49,
+  "killed_by_suite": {
+    "existing": 49,
+    "generated": 14
+  },
+  "killed_only_by_generated_tests": [],
+  "mutants_run": 60,
+  "mutation_score": 0.8167,
+  "notes": [
+    "49/60 injected bugs detected (mutation score 81.7%)",
+    "11 mutant(s) survived; each is a real hole in the suite and is listed individually in .okf/mutation.json"
+  ],
+  "survivors": [
+    {
+      "change": "'could not load target data, got: %s: %s'  |  raise UsageError('could not load target data, got: %s: %s' % (e.__class__.__name__, e)) -> 'could not load target data, got: %s: %sX'  |  raise UsageError('could not load target data, got: %s: %sX' % (e.__class__.__name__, e))",
+      "file": "glom/cli.py",
+      "id": "glom/cli.py:180:constant",
+      "line": 180,
+      "operator": "constant"
+    },
+    {
+      "change": "'expected target file or target argument, not both'  |  raise UsageError('expected target file or target argument, not both') -> 'expected target file or target argument, not bothX'  |  raise UsageError('expected target file or target argument, not bothX')",
+      "file": "glom/cli.py",
+      "id": "glom/cli.py:217:constant",
+      "line": 217,
+      "operator": "constant"
+    },
+    {
+      "change": "'__name__'  |  for k in ('__builtins__', '__name__', '__doc__', '__package__'):\n        ret.pop(k, None) -> '__name__X'  |  for k in ('__builtins__', '__name__X', '__doc__', '__package__'):\n        ret.pop(k, None)",
+      "file": "glom/cli.py",
+      "id": "glom/cli.py:235:constant",
+      "line": 235,
+      "operator": "constant"
+    },
+    {
+      "change": "2  |  posargs = PosArgSpec(str, max_count=2, display={'label': '[spec [target]]'}) -> 3  |  posargs = PosArgSpec(str, max_count=3, display={'label': '[spec [target]]'})",
+      "file": "glom/cli.py",
+      "id": "glom/cli.py:81:constant",
+      "line": 81,
+      "operator": "constant"
+    },
+    {
+      "change": "')'  |  return f'{cn}({bbrepr(self.spec)}, scope={self.scope!r})' -> ')X'  |  return f'{cn}(X{bbrepr(self.spec)}, scope=X{self.scope!r})X'",
+      "file": "glom/core.py",
+      "id": "glom/core.py:863:constant",
+      "line": 863,
+      "operator": "constant"
+    },
+    {
+      "change": "<  |  if self not in tree or target < tree[self]:\n            tree[self] = target -> <=  |  if self not in tree or target <= tree[self]:\n            tree[self] = target",
+      "file": "glom/grouping.py",
+      "id": "glom/grouping.py:235:comparison",
+      "line": 235,
+      "operator": "comparison"
+    },
+    {
+      "change": "')'  |  return f'{self.__class__.__name__}({bbrepr(self.key)})' -> ')X'  |  return f'{self.__class__.__name__}(X{bbrepr(self.key)})X'",
+      "file": "glom/matching.py",
+      "id": "glom/matching.py:628:constant",
+      "line": 628,
+      "operator": "constant"
+    },
+    {
+      "change": "'expected missing to be callable, not '  |  raise TypeError(f'expected missing to be callable, not {missing!r}') -> 'expected missing to be callable, not X'  |  raise TypeError(f'expected missing to be callable, not X{missing!r}')",
+      "file": "glom/mutation.py",
+      "id": "glom/mutation.py:174:constant",
+      "line": 174,
+      "operator": "constant"
+    },
+    {
+      "change": "%  |  raise TypeError('unexpected keyword args: %r' % sorted(kwargs.keys())) -> *  |  raise TypeError('unexpected keyword args: %r' * sorted(kwargs.keys()))",
+      "file": "glom/reduction.py",
+      "id": "glom/reduction.py:260:arithmetic",
+      "line": 260,
+      "operator": "arithmetic"
+    },
+    {
+      "change": "'invalid slice arguments: '  |  raise TypeError(f'invalid slice arguments: {args!r}') -> 'invalid slice arguments: X'  |  raise TypeError(f'invalid slice arguments: X{args!r}')",
+      "file": "glom/streaming.py",
+      "id": "glom/streaming.py:295:constant",
+      "line": 295,
+      "operator": "constant"
+    },
+    {
+      "change": "return <expr>  |  return contact.emails[0] if contact.emails else None -> return None  |  return None",
+      "file": "glom/tutorial.py",
+      "id": "glom/tutorial.py:447:return",
+      "line": 447,
+      "operator": "return"
+    }
+  ],
+  "total_candidates": 60
+}

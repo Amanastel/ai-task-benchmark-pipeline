@@ -1,0 +1,31 @@
+{
+  "difficulty": "medium",
+  "difficulty_rationale": "The symptom (a TypeError on hash) is easy to reach, but a correct answer requires noticing what the existing __eq__ actually compares and hashing the same thing. A plausible wrong answer -- hashing id(), or a different attribute than __eq__ uses -- passes the does-not-raise check and fails the equal-objects-hash-equally check, so the agent has to reason about the invariant rather than the error.",
+  "files_in_scope": [
+    "glom/core.py"
+  ],
+  "id": "new-path-hashable",
+  "instruction": "`glom.core.Path` defines equality but instances of it cannot be hashed, so they cannot be used as dictionary keys, stored in a set, or deduplicated. In Python, defining `__eq__` without `__hash__` makes a class unhashable.\n\nMake `Path` hashable, with a hash that is consistent with its existing equality semantics. Specifically, the following must hold:\n\n  - hashing an instance succeeds rather than raising `TypeError`;\n  - two instances that compare equal produce the same hash;\n  - an instance can be used as a dict key and recovered with an equal but distinct instance;\n  - hashing the same instance twice returns the same value.\n\nDo not change what equality means -- the existing comparison behaviour must be preserved exactly. Any hash function satisfying the equality contract is accepted.\n\nScope: `glom/core.py`.\n",
+  "modules": [
+    "glom.core"
+  ],
+  "notes": [],
+  "provenance": {
+    "detector": "eq_without_hash",
+    "excision_target": "glom.core.Path",
+    "kind": "net-new"
+  },
+  "title": "Make Path hashable, consistently with its equality",
+  "verifier": {
+    "command": "verifier/run.sh input    (and: verifier/run.sh solution)",
+    "selection": [
+      "tests_task/test_glom_core_path_hashable.py::test_instances_are_hashable",
+      "tests_task/test_glom_core_path_hashable.py::test_equal_instances_hash_equally",
+      "tests_task/test_glom_core_path_hashable.py::test_usable_as_dict_key",
+      "tests_task/test_glom_core_path_hashable.py::test_hash_is_stable_across_calls",
+      "tests_task/test_glom_core_path_hashable.py::test_set_deduplicates_equal_instances",
+      "tests_task/test_glom_core_path_hashable.py::test_unequal_instances_remain_distinct"
+    ],
+    "working_directory": "input/ (agent edits here); the harness overlays verifier/overlay before running"
+  }
+}

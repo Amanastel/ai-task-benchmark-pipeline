@@ -1,0 +1,18 @@
+{
+  "collected": 1,
+  "duration_s": 1.69,
+  "errors": 0,
+  "exit_code": 1,
+  "failed": 1,
+  "failing_tests": [
+    "glom.test.test_control_flow::test_switch"
+  ],
+  "failure_kind": "behavioural",
+  "failure_messages": {
+    "glom.test.test_control_flow::test_switch": "glom.core.GlomError.wrap(NameError): name 'default' is not defined\ndef test_switch():\n        data = {'a': 1, 'b': 2}\n        cases = [('c', lambda t: 3), ('a', 'a')]\n        cases2 = dict(cases)\n        assert glom(data, Switch(cases)) == 1\n        assert glom(data, Switch(cases2)) == 1\n        assert glom({'c': None}, Switch(cases)) == 3\n        assert glom({'c': None}, Switch(cases2)) == 3\n>       assert glom(None, Switch(cases, default=4)) == 4\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nglom/test/test_control_flow.py:14: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntarget = None\nspec = Switch([('c', <function test_switch.<locals>.<lambda> at 0x7c51056242c0>), ('a', 'a')])\nkwargs = {}\n\n    def glom(target, spec, **kwargs):\n        \"\"\"Access or construct a value from a given *target* based on the\n        specification declared by *spec*.\n    \n        Accessing nested data, aka deep-get:\n    \n        >>> target = {'a': {'b': 'c'}}\n        >>> glom(target, 'a.b')\n        'c'\n    \n        Here the *spec* was just a string denoting a path,\n        ``'a.b.``. As simple as it should be. The next example shows\n        how to use nested data to access many fields at once, and make\n        a new nested structure.\n    \n        Constructing, or restructuring more-complicated nested data:\n    \n        >>> target = {'a': {'b': 'c', 'd': 'e'}, 'f': 'g', 'h': [0, 1, 2]}\n        >>> spec = {'a': 'a.b', 'd': 'a.d', 'h': ('h', [lambda x: x * 2]"
+  },
+  "fingerprint": "fd64c7eaf1ff819f0d9d0c2255845646548d807ca1c2f01fe8c7466d923e5e11",
+  "passed": 0,
+  "passing_tests": [],
+  "skipped": 0
+}
